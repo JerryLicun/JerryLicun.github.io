@@ -1,14 +1,4 @@
-/*
 
-	Design by Free CSS Templates
-	http://www.freecsstemplates.org
-	Released for free under a Creative Commons Attribution License
-
-	Name       : Vacant Snowdrift
-	Version    : 1.0
-	Released   : 20130222
-	
-*/
 
 * {
 	margin: 0;
@@ -38,13 +28,13 @@ br.clear {
 }
 
 h1,h2,h3,h4 {
-	font-weight: normal;
+	font-weight: bold;
 }
 
 h2,h3,h4 {
 	margin-bottom: 1.25em;
 	font-family: helvetica;
-	font-weight: 550;
+	font-weight: 700;
 	color: #000000;
 }
 
