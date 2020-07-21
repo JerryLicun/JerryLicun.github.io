@@ -15,7 +15,7 @@ a:hover {
 }
 
 body {
-	font-size: 122pt;
+	font-size: 12pt;
 	line-height: 2em;
 	font-family: Trebuchet MS, sans-serif;
 	background: #f1f0f0;
@@ -183,7 +183,7 @@ ul {
 }
 
 #logo h1 {
-	font-size: 33pt;
+	font-weight: bold;
 	font-family: "times new roman";
 }
 
