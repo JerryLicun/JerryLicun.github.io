@@ -70,11 +70,10 @@ ul {
 
 #banner {
 	position: relative;
-	padding: 32px;
+	padding: 1px;
 	height: 200px;
 	width: 1116px;
 	margin: 0;
-	background: #ffffff;
 }
 
 #box1 {
@@ -95,7 +94,7 @@ ul {
 	width: 516px;
 	float: right;
 	padding: 28px;
-	background: #ffffff;
+
 }
 
 #copyright {
