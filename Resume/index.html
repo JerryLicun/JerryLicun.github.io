@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>JerryLicun- Monash Data Science Master在读/Melbourne</title>
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script>
+        function loading() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <article class="container">
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关，记得及时删除这段代码 Start-->
+            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>
+            <!-- 左侧固定开关，记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section class="me">
+                <section class="portrait">
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="assets/images/my_pic.jpg" onload="loading()">
+                </section>
+
+                <h1 class="name">Jerry Licun</h1>
+                <h4 class="info-job">Monash Data Science Master在读 /Melbourne</h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>个人信息</label>
+                        <span>Jerry Licun / 男 / 23岁</span>
+                    </li>
+                    <li>
+                        <label>英语水平</label>
+                        <span>CET-6</span>
+                    </li>
+                    <li>
+                        <label>计算机水平</label>
+                        <span>计算机二级(C语言)</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>手机</label>
+                        <a href="tel:0406-797-750" target="_blank">0406-797-750</a>
+                    </li>
+                    <li>
+                        <label>邮箱</label>
+                        <a href="liulicun0@gmail.com" target="_blank">liulicun0@gmail.com</a>
+                    </li>
+                    <li>
+                        <label>个人主页</label>
+                        <a href="http://JerryLicun.github.io" target="_blank">JerryLicun.github.io</a>
+                    </li>
+                    <li>
+                        <label>Github</label>
+                        <a href="https://JerryLicun.github.io" target="_blank">JerryLicun</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>GIS</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Python</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Java</label>
+                        <progress value="75" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>前端</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>SQL数据库</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Matlab</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+                <hr/>
+                <img src="https://github.com/if2er/FeZaoDuKe-Collection/blob/master/ifeees.jpg?raw=true" style="width: 100%;" alt="">
+            </section>
+
+            <!-- 技术栈 -->
+            <!-- <div class="stack info-unit">
+                    <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <label>前端</label>
+                            <span>React、jQuery、微信小程序、Bootstrap、SASS、LESS</span>
+                        </li>
+                        <li>
+                            <label>后端</label>
+                            <span>Node.js、MySQL、MongoDB、WordPress、ThinkPHP</span>
+                        </li>
+                        <li>
+                            <label>其他</label>
+                            <span>Git、SVN、Markdown</span>
+                        </li>
+                    </ul>
+                </div> -->
+        </section>
+
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>Monash University - Data Science（硕士）</span>
+                            <time>2020.3-至今</time>
+                        </h3>
+                        <p>专业排名
+                            <mark>无</mark> </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>华中农业大学 - 地理信息科学专业（本科）</span>
+                            <time>2015.9-2019.7</time>
+                        </h3>
+                        <p>GPA:
+                            <mark>3.02</mark>
+                        <p>
+                            专业核心课程：地理信息原理与应用、遥感导论、主动遥感、定量遥感、高光谱遥感、
+                            数据结构、面向对象设计、数据库设计、空间信息导论、C++程序设计、VB.Net程序设计、基于C#的二次开发</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 实习经历 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>实习经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>[经历1]武汉光庭公司基于智慧城市的 GIS 软件开发实习  </span>
+                            <time>2018.8 至 2018.9</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>基于智慧城市的 GIS 软件开发实习，学习Web前端及Java的基础知识。 
+                            	作为组长，在实习中与小组成员相互配合，共同进行功能的实现、测试、并最终较好的完成项目。    
+                            </li>
+                            <li>前端主要有<mark>HTML5+CSS+Javascript,以及Bootstrap</mark>前端应用框架，
+                            	及<mark>JQuery、JS</mark>技术。后端学习了<mark>MySQL</mark>数据库的使用，
+                            		并学会使用JDBC技术进行CRUD操作，
+                            	<mark>JSP与Servlet</mark>高级运用等。掌握Jsp页面相关技术，如EL，JSTL，验证码，分页等技术实现。
+                            </li> 
+                            <li>同时基于GIS专业相关内容，掌握了<mark>百度地图API</mark>的基本使用与地图功能的实现。
+                       
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </section>
+
+            <!-- 项目经验 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>个人项目</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>[项目1]基于ArcEngine的二次开发</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>2017.11-2017.12</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：ArcEngine+C#</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现了华中农业大学校园社团与社团管理部门的基本交互，校园活动的线上化展示，
+                                	   并实现基于地图的校园活动查询功能和矢量地图操作的基本功能
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]作为组长，同4位同学一起
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]完成从
+                                <mark>“调研-设计-实现-文档”</mark>等工作，主要负责系统原型、功能框架及数据提交流程、元数据及源数据的管理与共享方案的设计以及系统开发等工作
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品最终取得华中农业大学互联网开发大赛一等奖（队长） </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目2]地学统计功能应用制作</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>2018.6-2018.7</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Matlab</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]基于Matalab进行地理统计学的插值算法开发
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]作为组长，与3位同专业同学一起
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据，并用
+                                <mark>Matlab</mark>进行图形化展示
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]实现相关数据的统计分析、绘制正态图、模型函数图像、克里格插值以及插值图像输出等功能
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目3]基于智慧城市的 GIS 软件开发</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>2018.8-2018.9</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：HTML+CSS+Javascript+JAVA+MySQL+百度地图API</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现武汉市智慧政务系统，部门的线上管理与基本地图服务
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]作为组长，与 3位同专业同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]完成前端页面的设计与运用<mark>百度地图API</mark>实现基本的地图服务，并参与后端代码编写
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]较好完成项目，并实现预期功能
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目4]Covid-19流行病传染性分析与可视化</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.6-2020.7</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Python</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]Covid-19在人与人之间传播，可视化展示一段时间内人群的感染情况；并模拟在政府
+                                	   不同程度的封锁措施下，病毒的传染情况
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据，后台代码编写并用
+                                <mark>matplotlib</mark> 进行图形化结果展示
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]完成项目并实现预期功能
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>自我期望</h2>
+                <hr/>
+                <p>仰望星空，脚踏实地。愿人生有梦，各自精彩。
+            </section>
+        </section>
+    </article>
+
+
+
+    <footer class="footer">
+        <p>©2020 Jerry Licun
+            <time>2020年07月19日</time>.</p>
+    </footer>
+
+    <!-- 侧栏 -->
+    <aside>
+        <ul>
+            <li>
+                <a href="https://gitee.com/itsay/resume" target="_blank">源代码</a>
+            </li>
+            <li>
+                <a href="http://if2er.com/" target="_blank">Blog</a>
+            </li>
+        </ul>
+    </aside>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
