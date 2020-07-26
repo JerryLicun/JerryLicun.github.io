@@ -35,7 +35,7 @@
 								<a href="#">Blog</a>
 							</li>
 							<li class="last">
-								<a href="http://JerryLicun.github.io/resume/index.html">Contact</a>
+								<a href="../../Resume/index.html">Contact</a>
 							</li>
 						</ul>
 						<br class="clear" />
@@ -48,85 +48,52 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								Welcome to my Website
-							</h2><img class="left" src="images/pic2.jpg" width="100" height="100" alt="" />
+								20-07-26 科创板选股思路
+							</h2>
 							<p>
-								This is <strong>Jerry Licun Website</strong>, which documents my daily life and learning record. I hope
-								you can find something you need in this website. It is my great honor to share my website with you. <br /><br />
-								From <a href="http://JerryLicun.github.io/resume/index.html" rel="nofollow">Contact</a> buttom in the top, you could 
-								see my resume and contact information. From the <strong>left hyperlink</strong>, you would find some details about the classes or
-								some fields which I am interested in.<br/>
+							<pre>
+第一步：寻找机构操盘个股
 
+操作： 数据库查找条件（1）科创板个股
+	             （2）近一年内买方营业部为机构专用 
+       导出到EXCEL表格中
+       使用COUNTIF（）语句查询各股票出现次数
+       按重复次数从上到下排序
+       将股票代码XXXXXX.SH中的.SH替换掉
+       保存至txt文档中
+       自选股板块设置-->导入 --> .txt
+       完成
+
+第二步：剔除盘子过大个股（业绩稳定优先）
+           删除总市值500亿上的个股，且营业收入年增长缓慢
+
+第三步：剔除行业空间增长有限的传统行业
+           如传统制造业、中间件软件开发           
+
+第四步：剔除累计涨幅过大公司，涨幅4倍以上
+
+第五步：同一行业公司，以主营业务潜力为标准 精选一只
+
+第六步：排雷。借助财经网和各大招聘网查询目标公司实际经营情况和前景。
+
+							</pre>
 							</p>
 						</div>
+						
 						<div id="box2">
 							<h3>
 							
 							</h3>
-						
-												</div>
+						</div>
 						<div id="box3">
 							
 						</div>
 						<br class="clear" />
 					</div>
-					<div id="sidebar1">
-						<h3>
-							Semester One
-						</h3>
-
-		
-						<ul class="linkedList">
-							<li class="first">
-								<a href="#">MAT9004 Mathematics</a>
-							</li>
-							<li>
-								<a href="FIT9132/Index/index.html">FIT9132 Database </a>
-							</li>
-							<li>
-								<a href="#">FIT9136 Python</a>
-							</li>
-							<li class="last">
-								<a href="#">FIT9137 Network</a>
-							</li>
-						</ul>
-						<h3>
-							Others
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="#">Stock</a>
-							</li>
-						
-							<li class="last">
-								<a href="#">Diary</a>
-							</li>
-						</ul>
-						
-					</div>
+				
 					
 					
-					<div id="sidebar2">
-						<h3>
-							Semester Two
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="#">FIT5145 Introduction to DS</a>
-							</li>
-							<li>
-								<a href="#">FIT5147 Data Visualisation </a>
-							</li>
-							<li>
-								<a href="#">FIT5196 Data Wrangling</a>
-							</li>
-							<li class="last">
-								<a href="#">FIT5197 Data Modelling</a>
-							</li>
-						</ul>
-					<img class="top" src="images/pic3.jpg" width="224" height="96" alt="" />
-
-					</div>
+	
 					<br class="clear" />
 				</div>
 				<div id="footer">
