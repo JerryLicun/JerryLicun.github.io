@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title >Jerry Licun Pages</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a href="#">Jerry Licun Pages</a>
+						</h1>
+					</div>
+					<div id="nav">
+						<ul> 
+							<li class="first active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#">Services</a>
+							</li>
+							<li>
+								<a href="#">Demo</a>
+							</li>
+							<li>
+								<a href="#">About</a>
+							</li>
+							<li>
+								<a href="#">Blog</a>
+							</li>
+							<li class="last">
+								<a href="../../Resume/index.html">Contact</a>
+							</li>
+						</ul>
+						<br class="clear" />
+					</div>
+				</div>
+				<div id="banner">
+					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
+				</div>
+				<div id="main">
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								SQL
+							</h2>
+							<p>
+<pre>
+<h3>▪Single table retrieval with predicate</h3>Comparison: =, != ,< >, <, >, <=, >=
+Range: BETWEEN 1000 AND 3000 (both are inclusive)
+IN: city IN ('Melbourne', 'Sydney') 
+Pattern Match: WHERE city LIKE 'M%'
+WHERE unit_code LIKE 'FIT20__'
+DISTINCT: SELECT DISTINCT stu_nbr
+
+<h3>▪Join</h3>–Natural join
+<img src="images/51.png" />
+ON：the general form which always works 总是有用的
+USING：requires matching attribute names for the PK and FK
+NATURAL：requires matching attribute names for the PK and FK
+–Outer join 
+--The left outer join returns not only the rows matching the join condition (that is,
+rows with matching values in the common column), but it also returns the rows in the
+left table with unmatched values in the right table.左边的全部显示出来，不管有没有匹配成功
+--Right outer join: 右边的表不管匹配成没成功全部显示出来
+--FULL JOIN: 等于left join加上right join
+<img src="images/52.png" width="1100" />
+
+<h3>▪Aggregate functions</h3>--COUNT, MAX, MIN, SUM, AVG
+<img src="images/53.png" />
+The WHERE clause is applied to ALL rows in the table.
+The HAVING clause is applied to the groups defined by the GROUP BY clause.
+
+<h3>▪Set Operators</h3>Union All –All rows selected by either query, including all duplicates 包括重复行
+Union –All rows selected by either query, removing duplicates (e.g,, DISTINCT on Union
+All) 直接整合起来，不包括重复行
+Intersect –All distinct rows selected by both queries 只返回在两个里面都出现了的行
+Minus –All distinct rows selected by the first query but not by the second
+返回 只在第一个里面出现了但没出现在第二个里面的 行
+
+<h3>▪Subquery</h3>Operator for single value comparison. =, <, >
+Operator for multiple rows or a list comparison.
+–equality
+IN
+–inequality
+ALL, ANY combined with <, >
+<img src="images/54.png" />
+<img src="images/55.png" />
+Subquery可以与外部query相关
+<img src="images/56.png" />
+
+<h3>▪Oracle functions</h3>
+<img src="images/57.png" />
+–TO_CHAR, TO_DATE, NVL, UPPER, LOWER, ROUND
+NVL:
+<img src="images/57.png" />
+TO_CHAR when selecting for display.
+TO_DATE when comparing or inserting/updating.
+Current Date: SELECT sysdate FROM dual;
+
+</pre>
+
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
+					</div>
+				
+					
+					
+	
+					<br class="clear" />
+				</div>
+				<div id="footer">
+					<div id="footerContent">
+						<h3>
+							About Me
+						</h3>
+						<p>
+								I major in Master of Data Science in Monash University. As an IT faculty student, it is 
+								neccessary and useful for me to record my learning stream and my codes.
+							
+						</p>
+					</div>
+					<div id="footerSidebar1">
+						<h3>
+							Pragramming
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Python code</a>
+							</li>
+							<li>
+								<a href="#">C# code</a>
+							</li>
+							<li class="last">
+								<a href="#">R code</a>
+							</li>
+						</ul>
+					</div>
+					<div id="footerSidebar2">
+						<h3>
+							Data Science
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Data Visualisation</a>
+							</li>
+							<li>
+								<a href="#">Data Wrangling</a>
+							</li>
+							<li class="last">
+								<a href="#">Data Modelling</a>
+							</li>
+						</ul>
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div id="copyright">
+				&copy; Jerry Licun | Design by <a href="http://JerryLicun.github.io/" rel="nofollow"> Jerry Licun</a>
+			</div>
+		</div>
+    </body>
+</html>

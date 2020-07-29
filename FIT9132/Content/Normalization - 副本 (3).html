@@ -35,7 +35,7 @@
 								<a href="#">Blog</a>
 							</li>
 							<li class="last">
-								<a href="http://JerryLicun.github.io/Resume/index.html">Contact</a>
+								<a href="../../Resume/index.html">Contact</a>
 							</li>
 						</ul>
 						<br class="clear" />
@@ -44,44 +44,59 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT9132 Introduction to Databases
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/Data Modelling.html">1. Data Modelling </a>
-							</li>
-							<li>
-								<a href="../Content/Relational Model.html">2. Relational Model</a>
-							</li>
-							<li>
-								<a href="../Content/Normalization.html">3. Normalization</a>
-							</li>
-							<li>
-								<a href="../Content/SQL.html">4. SQL</a>
-							</li>
-							<li>
-								<a href="../Content/Transaction Management.html">5. Transaction Management</a>
-							</li>
-							<li>
-								<a href="../Content/NoSQL.html">6. NoSQL</a>
-							</li>
-							<li class="last">
-								<a href="#">sss</a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								Normalization
+							</h2>
+							<p>
+								<pre>
+▪UNF to 3 NF 
 
+<h3>–UNF to 1 NF </h3>– remove repeating group along with the PK of the main relation. 
+<img src="images/31.png">
+
+<h3>–1NF to 2 NF </h3>– remove partial dependency (general definition)
+partial dependency: exists when there is a functional dependence in which the determinant is only part of the primary key 
+[only part of the primary key (B) is needed to determine the value of C] 【主键的部分决定的依赖关系】
+<img src="images/32.png">
+
+<h3>–2NF to 3NF</h3> – remove transitive dependency. 
+transitive dependency exists when there are functional dependencies such that
+X Y, YZ, and X is the primary key【两个键都不是主键，但两者存在依赖关系】
+▪Dependency diagrams
+▪Be careful in choosing the PK!
+<img src="images/33.png"/>
+<img src="images/34.png"/>
+
+▪Mapping a set of 3NF relations to a logical model
+<img src="images/35.png" />
+
+
+</pre>
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>

@@ -35,7 +35,7 @@
 								<a href="#">Blog</a>
 							</li>
 							<li class="last">
-								<a href="http://JerryLicun.github.io/Resume/index.html">Contact</a>
+								<a href="../../Resume/index.html">Contact</a>
 							</li>
 						</ul>
 						<br class="clear" />
@@ -44,44 +44,75 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT9132 Introduction to Databases
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/Data Modelling.html">1. Data Modelling </a>
-							</li>
-							<li>
-								<a href="../Content/Relational Model.html">2. Relational Model</a>
-							</li>
-							<li>
-								<a href="../Content/Normalization.html">3. Normalization</a>
-							</li>
-							<li>
-								<a href="../Content/SQL.html">4. SQL</a>
-							</li>
-							<li>
-								<a href="../Content/Transaction Management.html">5. Transaction Management</a>
-							</li>
-							<li>
-								<a href="../Content/NoSQL.html">6. NoSQL</a>
-							</li>
-							<li class="last">
-								<a href="#">sss</a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+									Relational Model
+							</h2>
+							<p>
+								<pre>
+<h3>▪Relational model properties</h3>Relation heading ⇨ column headings
+Relation body   ⇨ set of data rows
+▪ No duplicate tuples – by definition sets do not contain duplicate elements
+▪ Tuples are unordered within a relation – by definition sets are not ordered
+▪ No ordering of attributes within a tuple – by definition sets are not ordered
+▪ Tuple values are atomic - cannot be divided, no multivalued (repeating) attributes allowed
 
+<h3>▪Keys</h3>–Superkey
+An attribute or set of attributes which exhibits only the uniqueness property
+Is a key that can uniquely identify any row in the table. (可以确定其他所有的key)
+-Candidate Key
+candidate key is a minimal superkey 最小的superkey
+—that is, a superkey without any unnecessary attributes
+-Primary Key
+必须只能选一个candidate key作为primary key即可
+–Foreign Key
+An attribute or attributes in one table whose values must match the primary key in another table 
+or whose values must be null. (一个表中的一个或多个键是另一个表中的主键,这个键叫外键)
+A Foreign Key value must either match the full primary key in a relation or be NULL.
+
+<h3>▪Data Integrity</h3>--Entity integrity: Primary key value must not be NULL.
+--Referential integrity: The values of FK must either match a value of a full PK in the related relation or be NULL.
+--Column/Domain integrity: All values in a given column must come from the same domain
+
+<h3>▪Relational Algebra</h3>SELECT (or RESTRICT) only uses one table as input；an operator used to select a subset of rows.
+选出一行或几行 (sigma) 
+PROJECT：an operator used to select a subset of columns. (pai)
+重复的值只取一次  
+JOIN |X|
+
+<h3>–Understanding of efficiency</h3>Addition
+Functional Dependency:
+– A set of attributes A functionally determines an attribute B if, and only if,
+for each A value, there is exactly one value of B in the relation
+NULL: 
+NULL is NOT a value - is a representation of the fact that there is NO VALUE
+
+
+
+</pre>
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>

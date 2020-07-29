@@ -35,7 +35,7 @@
 								<a href="#">Blog</a>
 							</li>
 							<li class="last">
-								<a href="http://JerryLicun.github.io/Resume/index.html">Contact</a>
+								<a href="../../Resume/index.html">Contact</a>
 							</li>
 						</ul>
 						<br class="clear" />
@@ -44,44 +44,75 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT9132 Introduction to Databases
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/Data Modelling.html">1. Data Modelling </a>
-							</li>
-							<li>
-								<a href="../Content/Relational Model.html">2. Relational Model</a>
-							</li>
-							<li>
-								<a href="../Content/Normalization.html">3. Normalization</a>
-							</li>
-							<li>
-								<a href="../Content/SQL.html">4. SQL</a>
-							</li>
-							<li>
-								<a href="../Content/Transaction Management.html">5. Transaction Management</a>
-							</li>
-							<li>
-								<a href="../Content/NoSQL.html">6. NoSQL</a>
-							</li>
-							<li class="last">
-								<a href="#">sss</a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								Data Definition Language
+							</h2>
+							<p>
+<pre>
+<h3>▪CREATE TABLE statements</h3><img src="images/41.png" />
+–Primary key definition
+–Foreign key definition 
+<img src="images/42.png" width="1000"/>
+<h3>–Other Constraints</h3>▪ALTER 
+<img src="images/43.png" />
+– Adding column(s).	 ADD	
+– Adding constraint(s).		
+– Removing column(s).  DROP	
+– Removing constraint(s)
+– Change data type	 MODIFY
 
+▪INSERT
+<img src="images/44.png" />
+–Adherence to referential integrity constraints
+•Order of insertion
+▪Oracle Sequence
+Oracle supports auto-increment of a numeric PRIMARY KEY.
+
+▪UPDATE (DML) 
+<img src="images/45.png" />
+
+▪DELETE (DML) 
+<img src="images/46.png" />
+
+<h3>Referential Integrity</h3>RESTRICT (Oracle No Action basically equivalent)
+• Deletion of tuples is NOT ALLOWED for those tuples in the table referred by the 
+FK (the table containing PK) if there is corresponding tuple in the table containing the FK.
+如果子表中有匹配的记录，则不允许对父表对应候选键进行update/delete操作
+– CASCADE
+• A deletion of a tuple in the table referred by the FK (the table containing PK) will result 
+in the deletion of the corresponding tuples in the table containing the FK. 
+任何相关视图和完整性约束一并被删除
+– NULLIFY
+• A deletion of a tuple in the table referred by the FK (the table containing PK) will result 
+in the update of the corresponding tuples in the table containing the FK to NULL.
+将那一组元素变成空值
+
+</pre>
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>

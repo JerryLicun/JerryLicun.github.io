@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title >Jerry Licun Pages</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a href="#">Jerry Licun Pages</a>
+						</h1>
+					</div>
+					<div id="nav">
+						<ul> 
+							<li class="first active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#">Services</a>
+							</li>
+							<li>
+								<a href="#">Demo</a>
+							</li>
+							<li>
+								<a href="#">About</a>
+							</li>
+							<li>
+								<a href="#">Blog</a>
+							</li>
+							<li class="last">
+								<a href="../../Resume/index.html">Contact</a>
+							</li>
+						</ul>
+						<br class="clear" />
+					</div>
+				</div>
+				<div id="banner">
+					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
+				</div>
+				<div id="main">
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								Transaction Management
+							</h2>
+							<p>
+
+<pre>
+<h3>▪Transactions</h3>–transaction boundaries (start and end)
+– Start
+• first SQL statement is executed (eg. Oracle)
+• Some systems have a BEGIN WORK type command
+– End
+• COMMIT or ROLLBACK
+
+<h3>▪ACID properties</h3>– Atomicity
+• all database operations (SQL requests) of a transaction must be entirely
+completed or entirely aborted
+– Consistency
+• it must take the database from one consistent state to another
+– Isolation
+• it must not interfere with other concurrent transactions
+• data used during execution of a transaction cannot be used by a second
+transaction until the first one is completed
+– Durability
+• once completed the changes the transaction made to the data are durable,
+even in the event of system failure
+
+<h3>▪Transaction problems</h3>Concurrency Management
+interleaved transactions
+Serial and Interleaved transactions
+
+▪Transaction management with locks. --Locking mechanism. 
+▪A mechanism to overcome the problems caused by interleaved(no serial)
+
+A transaction must acquire a lock prior to accessing a data item and locks are released when a transaction is completed.
+Exclusive Locks: a single transaction exclusively holds the lock on the item
+can both read and write to item
+Shared Lock: allows other transactions to read the item but not write to this item.
+别人读完了我才能锁定Exclusive
+
+<h3>▪Wait For Graphs</h3><img src="images/61.png" />
+
+Deadlock prevention
+– A transaction must acquire all the locks it requires before it updates any record.
+– If it cannot acquire a necessary lock, it releases all locks, and tries again later.
+▪Restart and Recovery using Transaction Log.
+REDO list containing the transaction-ids of transactions that were committed.
+UNDO list containing the transaction-ids of transactions that never committed
+<img src="images/62.png"/>
+Explain for each transaction what recovery operations will be needed when the
+database is restarted and why.
+T1 – nothing required, committed before checkpoint
+T2 – ROLL FORWARD, committed after checkpoint and before fail
+T3 – ROLL BACK, never reached commit
+T4 – ROLL FORWARD, started after checkpoint committed before fail
+T5 - ROLL BACK, never reached commit
+T2, T4-----REDO List  ROLL FORWARD —在崩溃前commit了但没在checkpoint前完成
+T3,T5 -----UNDO List ROLL BACK ---在崩溃前没有commit
+
+REDO all committed transactions up to the time of the failure - no requirement for 
+UNDO（已经数据库不会保存没有commit的数据）
+	A ROLLBACK or UNDO operation is required to restore the database to a consistent state
+
+The database is then rolled forward, using REDO logic and the after-images and rolled back, using UNDO logic and the before-images.
+
+Recovery
+REDO all committed transactions up to the time of the failure - no requirement for UNDO
+
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
+					</div>
+				
+					
+					
+	
+					<br class="clear" />
+				</div>
+				<div id="footer">
+					<div id="footerContent">
+						<h3>
+							About Me
+						</h3>
+						<p>
+								I major in Master of Data Science in Monash University. As an IT faculty student, it is 
+								neccessary and useful for me to record my learning stream and my codes.
+							
+						</p>
+					</div>
+					<div id="footerSidebar1">
+						<h3>
+							Pragramming
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Python code</a>
+							</li>
+							<li>
+								<a href="#">C# code</a>
+							</li>
+							<li class="last">
+								<a href="#">R code</a>
+							</li>
+						</ul>
+					</div>
+					<div id="footerSidebar2">
+						<h3>
+							Data Science
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Data Visualisation</a>
+							</li>
+							<li>
+								<a href="#">Data Wrangling</a>
+							</li>
+							<li class="last">
+								<a href="#">Data Modelling</a>
+							</li>
+						</ul>
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div id="copyright">
+				&copy; Jerry Licun | Design by <a href="http://JerryLicun.github.io/" rel="nofollow"> Jerry Licun</a>
+			</div>
+		</div>
+    </body>
+</html>
