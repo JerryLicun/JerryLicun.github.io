@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title >Jerry Licun Pages</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a href="#">Jerry Licun Pages</a>
+						</h1>
+					</div>
+					<div id="nav">
+						<ul> 
+							<li class="first active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#">Services</a>
+							</li>
+							<li>
+								<a href="#">Demo</a>
+							</li>
+							<li>
+								<a href="#">About</a>
+							</li>
+							<li>
+								<a href="#">Blog</a>
+							</li>
+							<li class="last">
+								<a href="../../Resume/index.html">Contact</a>
+							</li>
+						</ul>
+						<br class="clear" />
+					</div>
+				</div>
+				<div id="banner">
+					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
+				</div>
+				<div id="main">
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								NoSQL 代码模板
+							</h2>
+							<p>
+								<pre>
+
+<h3>MongoDB-数据形式</h3>
+{
+"_id": 11111111,
+"name": "Mary Smith",
+"contactInfo": {
+"address": "20/1 Princess Highway, Caulfield East, VIC , 3145",
+"phone": "0411111222 ",
+"email": "msmith@monash.edu"
+},
+"enrolmentInfo": [
+{
+"unitcode": "FIT1004",
+"year": "2013",
+"semester": 1,
+"mark": 65,
+"grade": "C "
+},
+{
+"unitcode": "FIT1040",
+"year": "2013",
+"semester": 2,
+"mark": 74,
+"grade": "D "
+},
+{
+"unitcode": "FIT1040",
+"year": "2013",
+"semester": 1,
+"mark": 45,
+"grade": "N "
+},{"unitcode" : "FIT2077", "year" : "2013", "semester" : 2, "mark" : 74, "grade" : "D "}
+]}
+
+
+从Oracle创建MongDB
+
+SET PAGESIZE 50
+
+SELECT
+JSON_OBJECT ( '_id' VALUE studid, 'name' VALUE studfname
+|| ' '
+|| studlname,
+'contactInfo' VALUE JSON_OBJECT (
+'address' VALUE studaddress,
+'phone' VALUE studphone,
+'email' VALUE studemail
+),
+'enrolmentInfo' VALUE JSON_ARRAYAGG(
+JSON_OBJECT(
+'unitcode' VALUE unitcode,
+'year' VALUE to_char(ofyear, 'yyyy'),
+'semester' VALUE semester,
+'mark' VALUE mark,
+'grade' VALUE grade
+)
+) FORMAT JSON )
+|| ','
+
+FROM
+uni.student
+NATURAL JOIN uni.enrolment
+GROUP BY
+studid,
+studfname,
+studlname,
+studaddress,
+studphone,
+studemail;
+
+<h3>insertOne命令--存入一条数据到MongDB</h3>
+db.studentenrolment.insertOne({"_id":11111111,"name":"Mary
+Smith","contactInfo":{"address":"20/1 Princess Highway, Caulfield
+East, VIC , 3145","phone":"0411111222
+","email":"msmith@monash.edu"},"enrolmentInfo":[{"unitcode":"FIT100
+4","year":"2013","semester":1,"mark":65,"grade":"C
+"},{"unitcode":"FIT1040","year":"2013","semester":2,"mark":74,"grad
+e":"D
+"},{"unitcode":"FIT1040","year":"2013","semester":1,"mark":45,"grad
+e":"N
+"},{"unitcode":"FIT2077","year":"2013","semester":2,"mark":74,"grad
+e":"D "}]},
+)
+
+
+<h3>insertMany命令--存入多条数据到MongDB</h3>
+db.studentenrolment.insertMany([{"_id":11111112,"name":"Matthew
+Long","contactInfo":{"address":"20/1 Princess Highway, Caulfield
+East, VIC , 3145","phone":"0411111333
+","email":"mlong@monash.edu"},"enrolmentInfo":[{"unitcode":"FIT1004
+","year":"2013","semester":2,"mark":90,"grade":"HD"},{"unitcode":"F
+IT1040","year":"2013","semester":1,"mark":80,"grade":"HD"},{"unitco
+de":"FIT2077","year":"2013","semester":2,"mark":72,"grade":"D
+"},{"unitcode":"FIT1004","year":"2013","semester":1,"mark":90,"grad
+e":"HD"}]},
+{"_id":11111113,"name":"Andy Lee","contactInfo":{"address":"1 King
+Road, Caulfield South, VIC , 3166","phone":"0411111444
+","email":"alees@monash.edu"},"enrolmentInfo":[{"unitcode":"FIT2077
+","year":"2013","semester":2,"mark":67,"grade":"C
+"},{"unitcode":"FIT1004","year":"2013","semester":1,"mark":72,"grad
+e":"D
+"},{"unitcode":"FIT1040","year":"2013","semester":1,"mark":74,"grad
+e":"D "}]}
+])
+
+
+<h3>Show data</h3>
+
+a. Show all data
+db.studentenrolment.find().pretty()
+b. Check how many data has been inserted into the collection
+db.studentenrolment.find().count()
+c. Show data for student id = 11111111
+db.studentenrolment.find({"_id":11111111})
+d. Show id and name of students who were enrolled in FIT2077
+db.studentenrolment.find({"enrolmentInfo.unitcode":"FIT2077"},
+{"_id":1,"name":1});
+e. Show details of students who have name John or Jake
+db.studentenrolment.find({$or:[{"name":/.*John.*/},{"name":/.*
+Jake.*/}]})
+
+
+Show id of students who have any enrolment mark > 80
+db.enrolment.find({"enrolmentInfo.mark":{$gt:80}},{"_id":1})
+
+Retrieve name and contact info of students who enrolled in unit which has "Advanced" as part of its name
+db.enrolment.find({"enrolmentInfo.unitname":/.*Advanced.*/},{"name":1,"contactInfo":1})
+
+Retrieve id and name of student who have grade N and P
+v1
+db.enrolment.find({"enrolmentInfo.grade":{$in:["N ","P "]}},{"_id":1,"name":1})
+v2
+db.enrolment.find({$or:[{"enrolmentInfo.grade":"N"},{"enrolmentInfo.grade":"P "}]},{"_id":1,"name":1})
+
+Assume that the collection name is employees, write the MongoDB command to show all employees
+ who have a job as ‘MANAGER’
+db.employees.find({"position": "MANAGER"})
+
+show all employees who have a surname of ‘JONES’ or ‘SCOTT’
+db.employees.find({$or:[{"name.familyName":"JONES"},{"name.familyName":"SCOTT"}]})
+
+
+<h3>Add/remove data from an array—push=add; pull=remove</h3>
+
+db.studentenrolment.find({"_id":11111111})
+db.studentenrolment.update({"_id":11111111},{$push:{"enrolmentInfo"
+:{"unitcode":"FIT3176","year":"2014","semester":2,"mark":0,"grade":
+"-"}}})
+db.studentenrolment.find({"_id":11111111})
+
+db.studentenrolment.update({"_id":11111111},{$pull:{"enrolmentInfo"
+:{"unitcode":"FIT3176"}}})
+db.studentenrolment.find({"_id":11111111})
+
+
+Create a new enrolment for studid 11111111, the student is enrolled in FIT2001 (Systems Development) 
+in 2013 semester 2. Since this is a new enrolment, set mark as 0 and grade as "-"
+db.enrolment.find({"_id":11111111})
+db.enrolment.update({"_id":11111111},{$push:{"enrolmentInfo":{"unitcode":"FIT2001",
+"unitname":"Systems Development","year":"2013","semester":2,"mark":0,"grade":"-"}}})
+db.enrolment.find({"_id":11111111})
+
+Delete the enrolment the enrolment of student id 11111111 in FIT2001
+db.enrolment.find({"_id":11111111})
+db.enrolment.update({"_id":11111111},{$pull:{"enrolmentInfo":{"unitcode":"FIT2001"}}})
+db.enrolment.find({"_id":11111111})
+
+
+<h3>Update Value</h3>
+Update student id 11111111’s name from Mary Smith to Mary Karpov. She also changed her
+phone number to 0432999242
+db.studentenrolment.updateOne({"_id":11111111}, {$set:{"name" :
+"Mary Karpov","contactInfo.phone":"0432999242"}})
+
+Update the enrolment for studid 11111111 in FIT2001, set the mark to 65 and grade to C
+db.enrolment.find({"_id":11111111})
+db.enrolment.updateOne({"_id":11111111,"enrolmentInfo.unitcode":"FIT2001"},
+{$set:{"enrolmentInfo.$.mark":65,"enrolmentInfo.$.grade":"C"}})
+db.enrolment.find({"_id":11111111})
+
+<h3>Delete</h3>
+Delete student id 11111111
+db.studentenrolment.deleteOne({"_id":11111111})
+db.studentenrolment.find({"_id":11111111})
+
+
+</pre>
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
+					</div>
+				
+					
+					
+	
+					<br class="clear" />
+				</div>
+				<div id="footer">
+					<div id="footerContent">
+						<h3>
+							About Me
+						</h3>
+						<p>
+								I major in Master of Data Science in Monash University. As an IT faculty student, it is 
+								neccessary and useful for me to record my learning stream and my codes.
+							
+						</p>
+					</div>
+					<div id="footerSidebar1">
+						<h3>
+							Pragramming
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Python code</a>
+							</li>
+							<li>
+								<a href="#">C# code</a>
+							</li>
+							<li class="last">
+								<a href="#">R code</a>
+							</li>
+						</ul>
+					</div>
+					<div id="footerSidebar2">
+						<h3>
+							Data Science
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Data Visualisation</a>
+							</li>
+							<li>
+								<a href="#">Data Wrangling</a>
+							</li>
+							<li class="last">
+								<a href="#">Data Modelling</a>
+							</li>
+						</ul>
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div id="copyright">
+				&copy; Jerry Licun | Design by <a href="http://JerryLicun.github.io/" rel="nofollow"> Jerry Licun</a>
+			</div>
+		</div>
+    </body>
+</html>
