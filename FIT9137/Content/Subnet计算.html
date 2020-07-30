@@ -35,7 +35,7 @@
 								<a href="#">Blog</a>
 							</li>
 							<li class="last">
-								<a href="http://JerryLicun.github.io/Resume/index.html">Contact</a>
+								<a href="../../Resume/index.html">Contact</a>
 							</li>
 						</ul>
 						<br class="clear" />
@@ -44,92 +44,64 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT9137 Introduction to Computer Architecture and Networks
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/5个层次.html">5个层次</a>
-							</li>
-							<li>
-								<a href="../Content/ADSL(Asymmetric digital subscriber line).html">ADSL(Asymmetric digital subscriber line)</a>
-							</li>
-							<li>
-								<a href="../Content/ARQ.html">ARQ</a>
-							</li>
-								<li>
-								<a href="../Content/Backbone.html">Backbone</a>
-							</li>
-							<li>
-								<a href="../Content/DHCP.html">DHCP</a>
-							</li>
-							<li>
-								<a href="../Content/DMZ.html">DMZ</a>
-							</li>
-								<li>
-								<a href="../Content/DNS.html">DNS</a>
-							</li>
-							<li>
-								<a href="../Content/HTTP 请求方法.html">HTTP 请求方法</a>
-							</li>
-							<li>
-								<a href="../Content/Linux命令.html">Linux命令</a>
-							</li>
-								<li>
-								<a href="../Content/MAC.html">MAC</a>
-							</li>
-							<li>
-								<a href="../Content/PDU.html">PDU</a>
-							</li>
-							<li>
-								<a href="../Content/SSH.html">SSH</a>
-							</li>
-								<li>
-								<a href="../Content/SSL和TLS.html">SSL和TLS</a>
-							</li>
-							<li>
-								<a href="../Content/Subnet计算.html">Subnet计算</a>
-							</li>
-								<li>
-								<a href="../Content/SYN.html">SYN</a>
-							</li><li>
-								<a href="../Content/TCP三次握手和四次挥手的全过程.html">TCP三次握手和四次挥手的全过程</a>
-							</li>
-								<li>
-								<a href="../Content/TCP和UDP区别.html">TCP和UDP区别</a>
-							</li><li>
-								<a href="../Content/Telnet.html">Telnet</a>
-							</li>
-								<li>
-								<a href="../Content/三种路由设备.html">三种路由设备</a>
-							</li><li>
-								<a href="../Content/加密技术.html">加密技术</a>
-							</li>
-								<li>
-								<a href="../Content/广域网（简称WAN).html">广域网（简称WAN)</a>
-							</li><li>
-								<a href="../Content/高级数据链路控制（HDLC，High-level Data Link Control）.html">高级数据链路控制（HDLC，High-level Data Link Control）</a>
-							</li>
-								<li>
-								<a href="#"></a>
-							</li>
-						
-							<li class="last">
-								<a href="#">FIT9137 Network</a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								Subnet计算
+							</h2>
+							<p>
+								<pre>
+<h4>四类网</h4><img src="images/21.jpg" width="1000"/>
+具体业务中，不用转化成二进制来计算，以下是我的计算方法：
+首先记住子网掩码每组可能出现的数字，分别是掩0位0，掩1位128，掩2位192，掩3位224，掩4位240，掩5位248，掩6位252，
+掩7位254，掩8位255。然后用256减去该数字，就得到了该子网的地址数。
+比如一个地址10.2.3.5/25，换算成子网掩码就是10.2.3.5 255.255.255.128。用256减128等于128。可以知道该子网有128个地址。
+然后该子网网络号就是10.2.3.0，可用地址范围是10.2.3.1到10.2.3.126，广播地址是10.2.3.127
 
+第一个0不能用，最后一个127也不能用
+<img src="images/22.png" width="1000"/>
+
+<h4>How many subnets and hosts per subnet can you get from the network 172.30.0.0 255.255.255.192? </h4>That’s a /26 (classless) subnet mask, because it contains 26 bits having the value one (i.e. 26 on bits).
+Keep in mind the default (classful) subnet for a class B IP address is a /16.
+Indicating with x the number of ones in your mask and with y the number of zeros, you have:
+x=26 (number of ones in classless CIDR)–16 (number of ones in classful) =10
+y=32 (total bits)–26 (number of ones)=6
+networks=2^10=1,024  方法：2^(数字1的个数-16)
+hosts=(2^6)–2=62 方法：（2^(32-数字1的个数) ）- 2
+
+<h4>What is the last valid host on the subnetwork 172.25.110.3 255.255.255.240?</h4>256-240=16
+172.25.110.0 – 15是一个区间段
+           16—31
+首位两个是无效的，第一个是本机地址，最后一个是广播地址，
+故而答案 172.25.110.14
+
+<h4>Which subnet does host 172.31.50.211 with mask 255.255.248.0 belong to?</h4>The correct answer is: 172.31.48.0
+<img src="images/23.png" />
+
+</pre>
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>
