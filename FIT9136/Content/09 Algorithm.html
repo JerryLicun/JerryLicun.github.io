@@ -49,36 +49,26 @@
 						<div id="box1">
 							
 							<h2>
-								课程注意点
+								Algorithm 
 							</h2>
 							<p>
 								<pre>
-Q1. Relational Model
-1.保证最少的数据量，不要直接Π全部，需要什么Π什么
-2.用于join的数据也要Π出来
-3.多打括号没问题
+▪Greed
+– A greedy algorithm is any algorithm that follows the problem solving
+heuristic of making the locally optimal choice at each stage with the intent of finding a global optimum
+– Efficient, but may not be the global optimum
+处理减缩问题
+这个算法出来的不是最优解，但总能出来一个解
 
-Q2 Database Design
-看清楚是concept model 还是logical model
-Concept: （1）只有key (2) 可以多对多
-Logical: （1）要把多对多全部分解开
-（2）一个的P是另一个的全部或部分PK的时候才能画实线 
-（3）多对多拆分是有一边不能为0，全是1-N或1-1 
-（4）用P和F表达主外键
-（5）要记得给没有FK的补充FK
-（6）只有说了将来还要补充的属性才需要重新设立一个表
+▪ Brute-force
+– Enumerate all possible combinations
+– Global optimum but inefficient
+列举所有可能性
 
-Q3. Normalisation
+▪ Backtracking
+– It ensures that only solutions that are possible are generated.
+-确保只产生可能的解决方案。如果进入死胡同，就会回到上一步再继续前进，迷宫？
 
-Q4. SQL/NOSQL
-1.注意细节，细节失分很亏
-2.速度的同时要看清楚图，看清楚题目，不然花时间做题 题目读错了就得不偿失
-3.INSERT UPDATE后面要加上COMMIT
-B. NOSQL:
-	1.方法没错，找一些模板，直接套，注意细节,审题
-	2.加强一下没有问题，别怕这种题
-	
-Q5. Transaction Management
 
 </pre>
 
