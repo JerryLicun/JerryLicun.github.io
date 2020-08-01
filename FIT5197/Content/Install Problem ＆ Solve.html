@@ -20,7 +20,7 @@
 					<div id="nav">
 						<ul> 
 							<li class="first active">
-								<a href="../Content/Install Problem ＆ Solve.html">Install Problem ＆ Solve</a>
+								<a href="../../index.html">Home</a>
 							</li>
 							<li>
 								<a href="#">Services</a>
@@ -35,7 +35,7 @@
 								<a href="#">Blog</a>
 							</li>
 							<li class="last">
-								<a href="http://JerryLicun.github.io/Resume/index.html">Contact</a>
+								<a href="../../Resume/index.html">Contact</a>
 							</li>
 						</ul>
 						<br class="clear" />
@@ -44,35 +44,54 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							Diary
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/New Listening Words.html">New Listening Words </a>
-							</li>
-							<li>
-								<a href="#">FIT9132 DatabaseFIT9132 DatabaseFIT9132 DatabaseFIT9132 DatabaseFIT9132 DatabaseFIT9132 DatabaseFIT9132 DatabaseFIT9132 DatabaseFIT9132 Database </a>
-							</li>
-							<li>
-								<a href="#">FIT9136 Python</a>
-							</li>
-							<li class="last">
-								<a href="#">FIT9137 Network</a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							
+							<h2>
+								Install Problem ＆ Solve
+							</h2>
+							<p>
+								<pre>
+<h4>Error: 
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate 
+version of Rtools before proceeding</h4>Solve:
+1.<a href="https://cran.r-project.org/bin/windows/Rtools/">安装Rtools</a>
+2.配置rtools路径： 在R Studio运行代码：writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
+3.关闭R Studio，重新打开
+4.测试路径：运行代码：Sys.which("make") ； 输出结果类似："C:\\rtools40\\usr\\bin\\make.exe"
+5.完成
 
+<h4>Error: 
+jupyter-client has to be installed but “jupyter kernelspec --version” exited with code 127</h4>Solve:
+1.If Anaconda is installed and the Jupyter-Notebook with it (should be the standard install), open up the Anaconda prompt, not the Windows command prompt or the Anaconda Navigator
+2.Look up the executable of R (not Rgui or Rstudio), it should be somewhere like C:\Program Files\R\R-3.5.1\bin and remember the path typing cd C:\Program Files\R\R-3.5.1\bin and 
+start R by typing R
+3.Typing IRkernel::installspec()
+4.Now you can start an R kernel within Jupyter-Notebook
+
+</pre>
+
+
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>
