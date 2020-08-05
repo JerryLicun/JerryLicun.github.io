@@ -15,7 +15,7 @@ a:hover {
 }
 
 body {
-	font-size: 12pt;
+	font-size: 14pt;
 	line-height: 2em;
 	font-family: Trebuchet MS, sans-serif;
 	background: #f1f0f0;
@@ -32,7 +32,7 @@ h1,h2,h3,h4 {
 }
 
 h2,h3,h4 {
-	margin-bottom: 1.25em;
+	margin-bottom: 0em;
 	font-family: helvetica;
 	font-weight: 700;
 	color: #000000;
