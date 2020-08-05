@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title >Jerry Licun Pages</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a href="#">Jerry Licun Pages</a>
+						</h1>
+					</div>
+					<div id="nav">
+						<ul> 
+							<li class="first active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#">Services</a>
+							</li>
+							<li>
+								<a href="#">Demo</a>
+							</li>
+							<li>
+								<a href="#">About</a>
+							</li>
+						
+							<li class="last">
+								<a href="../../Resume/index.html">Contact</a>
+							</li>
+						</ul>
+						<br class="clear" />
+					</div>
+				</div>
+				<div id="banner">
+					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
+				</div>
+				<div id="main">
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Introduction to Data Wrangling -- Reading
+							</h2>
+							<p>
+								<pre>
+Definition points out that:
+	(1)the ultimate goal of data wrangling is to make data useful, and
+	(2)the output of data wrangling consists of both a clean data and an editable and auditable 
+transcript of data manipulation performed. The transcript should also be reusable and could be 
+potentially adapted to other similar datasets.
+
+In conclusion, real-world data is usually incomplete, dirty and inconsistent, and particularly there
+is a lot of it. Therefore, data wrangling techniques, in particular, automated techniques, are needed
+to improve the accuracy and efficiency of the downstream data analysis tools.
+	"Current data quality problems cost U.S. business more than 600 billion dollars a year."
+	"Between 30% to 80% of the data analysis task is spent on cleaning and understanding the data."
+
+	Data cleaning: A set of operations that impute missing values, resolve, identify/remove 
+outliers, unify data formats and so on.
+	Data integration: A process of merging data from different sources into a coherent store. It 
+often comprises resolving duplicated records, detecting conflicts in data values, finding redundant
+attributes values, schema matching, etc.
+	Data normalisation and aggregation: Data normalisation is to adjust attribute values measured on
+different scales to a common scale, and data aggregation is to combine data from several
+measurements.
+	Data reduction: It produces a reduced representation of the original data in volume via diverse
+techniques, e.g., feature selection, dimension reduction, instance sampling.
+	Data discretization: Transforming numerical attributes into nominal attributes (part of data
+reduction but with particular importance in data preprocessing) is called data discretization. There
+are various techniques can be used to perform data discretization, such as binning methods,
+histogram analysis, clustering analysis, segmentation by natural partitioning, etc.
+
+1. Data acquisition: Gather data from different resources, e.g., the web, sensors, and conventional
+databases via API requests (e.g., Twitter's API and Google API), web scraping (acquiring data from
+the Internet through many ways other than API access), etc. Tools used include various python
+package, pandas, R, etc.
+2. Data loading & extracting: Load and parse data stored in many different formats, like XML,
+JSON, CSV, natural language text, etc. Tools used include, for instance, Beautiful Soup
+(http://www.crummy.com/software/BeautifulSoup/) (one of many python packages for parsing XML/HTML),
+regular expressions, NLTK (http://www.nltk.org/) (a python package for natural language processing).
+3. Data cleaning:Diagnose and handle various data quality problems. As aforementioned, performing data cleaning we need a set of operations that impute missing values, resolve
+inconsistencies, identify/remove outliers, unify data formats and other problems discussed in "Why
+do We Wrangle Data?".
+Data integration: Merge data from different 4. resources to create a rich and complete data set. It
+involves a set of operations that resolve related issues, such as data duplication, entity matching,
+and schema matching.
+5. Data profiling:Utilises different kinds of descriptive statistics and visualisation tools to improve
+data quality. The data profiling process might uncover more data quality problems, and suggests
+more operations for data cleaning and data integration.
+6. Data enrichment:Enrich existing data by feature generation, data transformation, data
+aggregation and data reduction, etc. After performing data cleaning and profiling, we now have a
+good sense of the data. Then we should think about what new kinds of data we can derive from the
+data we already have, or that we can merge from other related sources.
+7. Data storing:Finally store the clean data in various formats, which are easily accessible by
+downstream analysis tools.
+8. Documenting the process: Besides a cleaning script, we should also keep a detailed description
+of all data manipulations applied in the above tasks and generate a proper code book that
+describes each variable and its values in the clean data.
+
+<img src="images/01.png">
+
+								</pre>
+							</p>
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
+					</div>
+				
+					
+					
+	
+					<br class="clear" />
+				</div>
+				<div id="footer">
+					<div id="footerContent">
+						<h3>
+							About Me
+						</h3>
+						<p>
+								I major in Master of Data Science in Monash University. As an IT faculty student, it is 
+								neccessary and useful for me to record my learning stream and my codes.
+							
+						</p>
+					</div>
+					<div id="footerSidebar1">
+						<h3>
+							Pragramming
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Python code</a>
+							</li>
+							<li>
+								<a href="#">C# code</a>
+							</li>
+							<li class="last">
+								<a href="#">R code</a>
+							</li>
+						</ul>
+					</div>
+					<div id="footerSidebar2">
+						<h3>
+							Data Science
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Data Visualisation</a>
+							</li>
+							<li>
+								<a href="#">Data Wrangling</a>
+							</li>
+							<li class="last">
+								<a href="#">Data Modelling</a>
+							</li>
+						</ul>
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div id="copyright">
+				&copy; Jerry Licun | Design by <a href="http://JerryLicun.github.io/" rel="nofollow"> Jerry Licun</a>
+			</div>
+		</div>
+    </body>
+</html>
