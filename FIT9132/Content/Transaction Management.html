@@ -78,7 +78,8 @@ Serial and Interleaved transactions
 ▪Transaction management with locks. --Locking mechanism. 
 ▪A mechanism to overcome the problems caused by interleaved(no serial)
 
-A transaction must acquire a lock prior to accessing a data item and locks are released when a transaction is completed.
+A transaction must acquire a lock prior to accessing a data item and locks are released when a 
+transaction is completed.
 Exclusive Locks: a single transaction exclusively holds the lock on the item
 can both read and write to item
 Shared Lock: allows other transactions to read the item but not write to this item.
@@ -107,7 +108,8 @@ REDO all committed transactions up to the time of the failure - no requirement f
 UNDO（已经数据库不会保存没有commit的数据）
 	A ROLLBACK or UNDO operation is required to restore the database to a consistent state
 
-The database is then rolled forward, using REDO logic and the after-images and rolled back, using UNDO logic and the before-images.
+The database is then rolled forward, using REDO logic and the after-images and rolled back, 
+using UNDO logic and the before-images.
 
 Recovery
 REDO all committed transactions up to the time of the failure - no requirement for UNDO

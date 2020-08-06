@@ -64,7 +64,8 @@ a relationship.
 in the relationship.
 
 –Associative entity 
-Associative (Composite) Entities ER model uses the associative entity to represent an M: N relationship between two or more entities.
+Associative (Composite) Entities ER model uses the associative entity to represent an M: N relationship 
+between two or more entities.
 理解:连接两个表的一个表，有两个表的主键；依赖于另两个表存在；可以有附加值
 
 <h3>▪Types of attributes </h3>Simple: Cannot be subdivided. e.g. Age, sex, marital status
@@ -83,17 +84,19 @@ associated with one occurrence of the related entity. In the ERD
 - type: one-to-one, one-to-many, many-to-many
 <img src="images/4.png" /><img src="images/5.png" />
 –Participation
-Optional participation： one entity occurrence does not require a corresponding entity occurrence in a particular 
+Optional participation： one entity occurrence does not require a corresponding entity occurrence in 
+a particular 
 relationship（图上是⚪）
 Mandatory participation： means that one entity occurrence requires a corresponding
 entity occurrence in a particular relationship. （图上切断线）
 <img src="images/6.png" width=1200px />
 
 –Identifying vs Non-identifying. 
-Strong (Identifying) Relationships：the primary key of the related entity contains a primary key component 
-of the parent entity. (子类的主键包含父类的主键)--实线
-Weak (nonidentifying) relationship: A relationship in which the primary key of the related entity does not 
-contain a primary key component of the parent entity. (父类的主键是子类的非主键) 相关实体的主键不包含父实体的主键组件。--虚线
+Strong (Identifying) Relationships：the primary key of the related entity contains a primary key 
+component of the parent entity. (子类的主键包含父类的主键)--实线
+Weak (nonidentifying) relationship: A relationship in which the primary key of the related entity 
+does not contain a primary key component of the parent entity. (父类的主键是子类的非主键) 相关实体的
+主键不包含父实体的主键组件。--虚线
 
 ▪Mapping from Conceptual to Logical
 <img src="images/7.png" width=1000px/>

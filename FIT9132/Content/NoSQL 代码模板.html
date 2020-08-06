@@ -175,7 +175,8 @@ Jake.*/}]})
 Show id of students who have any enrolment mark > 80
 db.enrolment.find({"enrolmentInfo.mark":{$gt:80}},{"_id":1})
 
-Retrieve name and contact info of students who enrolled in unit which has "Advanced" as part of its name
+Retrieve name and contact info of students who enrolled in unit which has "Advanced" 
+as part of its name
 db.enrolment.find({"enrolmentInfo.unitname":/.*Advanced.*/},{"name":1,"contactInfo":1})
 
 Retrieve id and name of student who have grade N and P

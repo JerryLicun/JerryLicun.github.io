@@ -51,20 +51,21 @@
 							<p>
 								<pre>
 <h4>Error: 
-WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate 
-version of Rtools before proceeding</h4>Solve:
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and 
+install the appropriate version of Rtools before proceeding</h4>Solve:
 1.<a href="https://cran.r-project.org/bin/windows/Rtools/">安装Rtools</a>
-2.配置rtools路径： 在R Studio运行代码：writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
+2.配置rtools路径： 在R Studio运行代码：writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', 
+con = "~/.Renviron")
 3.关闭R Studio，重新打开
 4.测试路径：运行代码：Sys.which("make") ； 输出结果类似："C:\\rtools40\\usr\\bin\\make.exe"
 5.完成
 
 <h4>Error: 
 jupyter-client has to be installed but “jupyter kernelspec --version” exited with code 127</h4>Solve:
-1.If Anaconda is installed and the Jupyter-Notebook with it (should be the standard install), open up the Anaconda prompt, 
-not the Windows command prompt or the Anaconda Navigator
-2.Look up the executable of R (not Rgui or Rstudio), it should be somewhere like C:\Program Files\R\R-3.5.1\bin 
-and remember the path typing cd C:\Program Files\R\R-3.5.1\bin and start R by typing R
+1.If Anaconda is installed and the Jupyter-Notebook with it (should be the standard install), open up 
+the Anaconda prompt, not the Windows command prompt or the Anaconda Navigator
+2.Look up the executable of R (not Rgui or Rstudio), it should be somewhere like C:\Program Files\R\
+R-3.5.1\bin and remember the path typing cd C:\Program Files\R\R-3.5.1\bin and start R by typing R
 3.Typing IRkernel::installspec()
 4.Now you can start an R kernel within Jupyter-Notebook
 

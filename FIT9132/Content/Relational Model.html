@@ -71,10 +71,12 @@ or whose values must be null. (一个表中的一个或多个键是另一个表�
 A Foreign Key value must either match the full primary key in a relation or be NULL.
 
 <h3>▪Data Integrity</h3>--Entity integrity: Primary key value must not be NULL.
---Referential integrity: The values of FK must either match a value of a full PK in the related relation or be NULL.
+--Referential integrity: The values of FK must either match a value of a full PK in the related 
+relation or be NULL.
 --Column/Domain integrity: All values in a given column must come from the same domain
 
-<h3>▪Relational Algebra</h3>SELECT (or RESTRICT) only uses one table as input；an operator used to select a subset of rows.
+<h3>▪Relational Algebra</h3>SELECT (or RESTRICT) only uses one table as input；an operator used 
+to select a subset of rows.
 选出一行或几行 (sigma) 
 PROJECT：an operator used to select a subset of columns. (pai)
 重复的值只取一次  

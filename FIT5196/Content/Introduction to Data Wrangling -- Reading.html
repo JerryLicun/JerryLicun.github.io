@@ -66,11 +66,11 @@ outliers, unify data formats and so on.
 	Data integration: A process of merging data from different sources into a coherent store. It 
 often comprises resolving duplicated records, detecting conflicts in data values, finding redundant
 attributes values, schema matching, etc.
-	Data normalisation and aggregation: Data normalisation is to adjust attribute values measured on
-different scales to a common scale, and data aggregation is to combine data from several
+	Data normalisation and aggregation: Data normalisation is to adjust attribute values measured 
+on different scales to a common scale, and data aggregation is to combine data from several
 measurements.
-	Data reduction: It produces a reduced representation of the original data in volume via diverse
-techniques, e.g., feature selection, dimension reduction, instance sampling.
+	Data reduction: It produces a reduced representation of the original data in volume via 
+diverse techniques, e.g., feature selection, dimension reduction, instance sampling.
 	Data discretization: Transforming numerical attributes into nominal attributes (part of data
 reduction but with particular importance in data preprocessing) is called data discretization. There
 are various techniques can be used to perform data discretization, such as binning methods,
@@ -84,15 +84,16 @@ package, pandas, R, etc.
 JSON, CSV, natural language text, etc. Tools used include, for instance, Beautiful Soup
 (http://www.crummy.com/software/BeautifulSoup/) (one of many python packages for parsing XML/HTML),
 regular expressions, NLTK (http://www.nltk.org/) (a python package for natural language processing).
-3. Data cleaning:Diagnose and handle various data quality problems. As aforementioned, performing data cleaning we need a set of operations that impute missing values, resolve
-inconsistencies, identify/remove outliers, unify data formats and other problems discussed in "Why
-do We Wrangle Data?".
-Data integration: Merge data from different 4. resources to create a rich and complete data set. It
-involves a set of operations that resolve related issues, such as data duplication, entity matching,
-and schema matching.
-5. Data profiling:Utilises different kinds of descriptive statistics and visualisation tools to improve
-data quality. The data profiling process might uncover more data quality problems, and suggests
-more operations for data cleaning and data integration.
+3. Data cleaning:Diagnose and handle various data quality problems. As aforementioned, performing 
+data cleaning we need a set of operations that impute missing values, resolve inconsistencies, 
+identify/remove outliers, unify data formats and other problems discussed in "Why do We Wrangle 
+Data?".
+4. Data integration: Merge data from different 4. resources to create a rich and complete data set. 
+It involves a set of operations that resolve related issues, such as data duplication, entity 
+matching, and schema matching.
+5. Data profiling:Utilises different kinds of descriptive statistics and visualisation tools to 
+improve data quality. The data profiling process might uncover more data quality problems, and 
+suggests more operations for data cleaning and data integration.
 6. Data enrichment:Enrich existing data by feature generation, data transformation, data
 aggregation and data reduction, etc. After performing data cleaning and profiling, we now have a
 good sense of the data. Then we should think about what new kinds of data we can derive from the
