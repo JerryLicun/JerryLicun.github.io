@@ -79,6 +79,7 @@ ul {
 #box1 {
 	margin: 0 0 24px 0;
 	overflow: hidden;
+	word-wrap: break-word;
 }
 
 #box2 {
