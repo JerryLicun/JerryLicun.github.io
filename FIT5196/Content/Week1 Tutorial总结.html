@@ -45,11 +45,32 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								模板
-							</h2>
-<pre>
-	
-	
+								Week1 Tutorial总结
+							</h2><pre><h3>Pandas Basics</h3>读取数据：读取需要的行或列（按名称、按索引号）
+	ufo[['City','State']].head()
+空值数据的舍去
+	ufo.dropna(axis = 0,inplace = True,how = 'any')
+加新的一行或一列
+	ufo['place'] = ''
+代码运算消耗时间
+	%%timeit
+
+提取incident和involving中间的内容
+df['split'].str.extract("Incident (.*) involving")
+整理数据
+数据转换为数字类型
+	data = data.convert_objects(convert_numeric = True)
+显示数据类型
+data.dtypes
+数据描述，展示数学关系（平均值、最大值、最小值…）
+	data.describe()
+选取这些特殊值（最大、小）
+	data[data['Crew'] > 20]
+
+<h4>课堂笔记</h4>Shift+tab可以解释那一个函数用法和意义
+按H可以看快捷键介绍
+Loc就是按Index，iloc不一样，0：10就算从零到10总共十个数
+
 </pre>
 					
 						</div>
