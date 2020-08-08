@@ -45,13 +45,76 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								New Listening words
+								Week 1 Tutor -- R语言入门
 							</h2>
-							<p>
-								<pre>
+<pre>
+大小写注意
 
-								</pre>
-							</p>
+算数运算
+	** 或 2^3 次方
+	%/% 整除
+	%% 取余数
+变量赋值
+	x<- x+3
+	删除变量：rm(x)
+
+数据类型
+•	numeric:
+•	double (real numbers): values like 2.3, 3.14, -5.7634 , …
+•	integer: values like 0,1,2, -4, …
+•	character: values like “GDDS”, ‘exe’
+•	logical: TRUE and FALSE (always capital letters)
+•	complex: we have nothing to do with it in this unit.
+用typeof(x)来查看
+
+<h3>Vector</h3>Vector是最常用的数据类型，我们用到的所有object都是vector. 
+vector是具有一个或多个相同类型值的变量，例如，都是数值类。若不同系统会自动强制转换
+
+•	Vectors are created by c() function (concatenatation function)
+•	Also, they ca be created by vector() function: v <- vector(“numeric”, length=5)
+•	should contain objects of the same class
+•	if you put objects from different classes, an implicit coercion (the calss of value would be changed) will happen
+•	Creating variables using seq and rep.  
+v6 <- seq(from=3, to=10, by=2)  functions. 
+
+创建/删除vector 
+	V1 <- c(4,5,7)
+	V1 <- NULL
+
+赋值
+	V1[2] <- 3
+删除某一个元素
+	V1[-2] 删掉第二个元素
+
+<h3>List</h3>similar to a vector, but it could contain objects from different classes. 
+
+创建
+	L1<- list(2,”a”,3)
+
+数字类型 
+X <- 1 double
+X<- 1L  int
+改变数据类型
+	y <- as.numeric(x)
+		
+<h3>Factors</h3>Factors are stored as integers
+x <- factor(c("male", "fmale",  "fmale", "male")) 
+总结各元素重复次数
+	summary(x)
+总结那几个元素
+	levels(x)
+
+没有的值
+	NA
+空值的处理
+	Mean(x1,na.rm=TRUE)
+
+<h3>Matrices</h3>m <- matrix(nrow=2, ncol=3) #empty matrix with dimension
+m <- matrix(c(1,3,6,2,8,4), nrow=2, ncol=3 )
+
+	
+</pre>
+					
 						</div>
 						
 						<div id="box2">
