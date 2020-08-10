@@ -41,38 +41,49 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT5197 Statistical data modelling
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/Install Problem ＆ Solve.html">Week0 -- Install Problem ＆ Solve</a>
-							</li>
-							<li>
-								<a href="../Content/Week1 Tutor.html">Week1 -- R语言基础（1）</a>
-							</li>
-							<li>
-								<a href="../Content/week1 R语言.html">Week1 -- R语言基础（2）</a>
-							</li>
-							<li>
-								<a href="../Content/Week2 三种概率函数.html">Week2 -- 三种概率函数</a>
-							</li>
-							<li class="last">
-								<a href="#"></a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Week 1 Tutor -- R语言入门（2）
+							</h2>
+<pre>
+<h3>Data Frames</h3>是一种特殊类型的列表，其中列表中的每个元素都应该具有相同的长度。
+Data Frames可以在每个列中存储不同的对象类。矩阵中每个元素都应该有相同的类。
 
+创建	Data Frames
+	df <- data.frame(x,y,z)
+命名
+	x <- c(3,5,7)
+	names(x) <- c("low", "med", "high")
+
+<h3>Reading/Writing Data</h3>读取的文件在你的当前工作文件夹下
+查看当前路径/查看当前路径文件
+	getwd()  /  dir()
+读取数据
+	data <- read.table(file='airfoil_self_noise.txt')
+写数据
+	write.csv(data, file="mydata.csv")
+</pre>
+					
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>
