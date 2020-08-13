@@ -41,35 +41,64 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT5145 Introduction to Data Science
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/week1-R markdown.html">week2 -- R markdown</a>
-							</li>
-							<li>
-								<a href="../Content/week2 R.html">Week2 -- Tidy data in R</a>
-							</li>
-							<li>
-								<a href="#">FIT9136 Python</a>
-							</li>
-							<li class="last">
-								<a href="#">FIT9137 Network</a>
-							</li>
-						</ul>
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Regular Expressions
+							</h2>
+<pre>
+澳洲车牌XRA 000
+	[A-Z0-9][A-Z][A-Z]\s[0-9][A-Z0-9][A-Z0-9]
+非运算符[^b]
+	[^b]og  -- 不匹配bog
+常用缩写
+<img src="images/12.png" />
+*+?的用法
+<img src="images/11.png" />
+分组
+	（abc）+
+	"Incident American Airlines Flight 11 involving a Boeing 767-223ER in 2001"
+	Incident (.*) involving
+Greedy strategy 尽可能多的匹配
+	.*\d+  			number 516
+	结果：number 51
+Lazy strategy 尽可能少的匹配
+	*?   .*?\d+  		number 516
+	+?
+	??
+	结果：number
+If it is in a greedy way, dot can match any character, including"
+If it is in a lazy way, dot will not match"
 
+OR
+	A|B
+\
+	<img src="images/13.png" />
+	
+If my re is "hello$", it means I want to check if the word "hello" is at the end of a string.
+:? means non-capturing group. We don’t capture the result of a group. We use group to make the 
+regular expression looks more clear to us.
+</pre>
+					
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>
