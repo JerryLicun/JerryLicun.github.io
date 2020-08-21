@@ -63,8 +63,17 @@
 (3)用循环提取出每一个值
 (4)命名，得到和前面一样的表格形式数据
 
-<h3>PDF</h3>有方法，但常出错
+<h3>PDF</h3>(1)调用 pip install pdfminer.six==20181108提取所有内容
+(2)循环读出来所有值， print (repr(line))可以让回车显示为\n
+(3)正则表达式剪切，得到所需内容
+(4)通过空格、回车进行分割
+(5)内容总结，输出成表格
 
+<h3>EXCEL</h3>(1)调用Panda,读取文件
+(2)Drop useless columns and rows
+(3)设置某一列的值为index
+(4)整理所有的列 
+------具体代码看视频
 <h3>补充</h3>Geojson: A format for encoding a variety of geographic data structures.
 
 Their structure are very similar, basically geojson is also in json format, but it has some fixed 
