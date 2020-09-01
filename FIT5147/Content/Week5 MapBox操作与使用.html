@@ -45,59 +45,19 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								模板
+								MapBox操作与使用
 							</h2>
-<pre><h3>各种地图类型名称</h3>1. Dot Density map: Dot density mapping shows quantitative data associated with regions that have 
-	fixed boundaries. Dots or some other symbol are drawn on the region in a semi-random 
-	distribution. The number of dots is proportional to the data value.
+<pre>
+<h3>Create a customized map</h3>调整颜色、地物颜色、（用图片上的颜色给不同地物种类上色）
+<a href="http://www.geojson.io">（一个可以读取geojson数据点到地图，把地图上的点线面导出成geojson代码的网站）</a>
+读取geojson数据点到MapBox地图、在地图上显示数据点，并改变icon样式
+用API导出，使用javascript代码显示（7.5.2c Make your pointers interactive）
 
-2. Cartogram (discrete):the map is “exploded” so that there is sufficient room between the regions for them to grow in size. 
-	In this kind of map the regions preserve their shape but how they fit together is more 
-	difficult to see. In a more abstract variant, the regions are replaced by a simple 
-	geometric shape such as a circle.
-	
-3. Flow map: Discrete flow maps show the movement of commodities such as goods or people between places. They are also 
-	called origin-destination (OD) maps.
+<h3>JavaScript具体代码</h3><img src="images/50.png" width="1000"/>
 
+<img src="images/51.png" width="1000"/>
 
-4. Isarithmic map: A useful metaphor for visualising quantitative data that varies continuously 
-	across space is to map it to a kind of conceptual height or elevation for each point on 
-	the map. The resulting 3D map is then visualised using standard techniques for showing 
-	elevation like contours, wire-frames, surfaces or shaded relief.
-
-
-5. Cartogram (contiguous): Cartograms are also called value-by-area maps. They are for mapping 
-	quantitative data with a natural zero, such as population or average income, to regions.
-
-6. Choropleth map + Proportional symbol map: Choropleth mappings show categorical and ranked
-	(both ordinal and quantitative) data associated with regions that have fixed boundaries. 
-	These regions are typically political or administrative boundaries. The data value is 
-	usually represented using colour though sometimes a pattern is used and regions on the 
-	map are filled with the colour or pattern corresponding to their data value.
-
-7. Proportional symbol map: In this kind of map, a symbol (such as a circle, triangle, square
-	or pictorial icon) is used to show ordered data associated with either a region or a 
-	particular location. The size of the symbol is proportional to the data value. 
-	
-8. Prism map: A prism map is a variant of a choropleth map in which height is used to show 
-	the data value. Prism maps are well suited to comparing quantitative data.
-
-
-<img src="images/41.png" width="1000"/>
-<img src="images/42.png" width="1000"/>
-
-<h3>Projection分类</h3>• Equal area (or equivalent)： projections preserve area.
-• Conformal： projections preserve angles locally,
-• Equidistant： projections preserve distance from a particular location (at most two)
-• Azimuthal： projections preserve directions from a particular location
-• Compromise： projections ensure that area and shape distortion is “not too bad”
-
-
-
-
-
-
-	
+<h3>Integrating Mapbox style with Leaflet in R</h3><img src="images/53.png" width="1000"/>
 </pre>
 					
 						</div>
