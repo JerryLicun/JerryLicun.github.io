@@ -45,30 +45,54 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								文本文件处理
+								Text-处理步骤
 							</h2>
 <pre>
-TF: the number of occurrences of a word in a document.
-IDF: Inverse document frequency
-     The idf of a rare term is high, whereas the idf of a frequent term is likely to be low.
-    
-TF-IDF:The tf–idf value increases proportionally to the number of times a word appears in 
-the document and is offset by the number of documents in the corpus that contain the word,
-which helps to adjust for the fact that some words appear more frequently in general.     
-出现的文档越多，值越低；但文档出现次数越多，值越高
- 
-Collocations: multi-word expressions consisting of two or more words that occur more 
-frequently than by chance, and correspond to some conventional way of saying things.	
+<h4>一些可能用到的libray：</h4>	from bs4 import BeautifulSoup as bsoup
+	import re
+	import os
+	import nltk
+	from nltk.collocations import *
+	from itertools import chain
+	import itertools
+	from nltk.tokenize import RegexpTokenizer
+	from nltk.tokenize import MWETokenizer
+	import matplotlib.pyplot as plt
+	%matplotlib inline 
+	from nltk.corpus import reuters
 
-在Jupyter Notebook里面：the Fundamentals of Text Pre-processing-checkpoint.ipynb
-句子分割（按空格）； 处理一些特殊字符（U.S.A, 网站、IP地址、美元数额...）
+<h4>全转换为小写：</h4>	raw_text = raw_text.lower()
 
-调用一些库来处理：动词时态、简写、格式...
+<h4>Word Tokenization：</h4>	from nltk.tokenize import RegexpTokenizer 
+	tokenizer = RegexpTokenizer(r"\w+(?:[-.]\w+)?")
+	unigram_tokens = tokenizer.tokenize(raw_text)
 
-<h3>Tutor内容</h3>Jupyter Notebook: Tutorial_04_answer.ipynb
-调用一个library, 对各个字符的出现次数进行统计、调用已经给的字典来remove无意义的词、分辨一个词词性、
-把不同时态、单复数的词统计为同一个词（eg. finding & findings）
+<h4>Tokenize the raw_tex with multi-word expressions.（in a list）:</h4>	例如：uni_voc = list(set(unigram_tokens))
+	      uni_voc.append(('lobe', 'nodule'))
 	
+	from nltk.tokenize import MWETokenizer
+	mwe_tokenizer = MWETokenizer(uni_voc)
+	mwe_tokens = mwe_tokenizer.tokenize(unigram_tokens)
+
+<h4>Stop Words Removal:</h4>	from nltk.corpus import stopwords
+	stopwords_list = stopwords.words('english')
+	
+	stopped_tokens = [w for w in mwe_tokens if w not in stopwords_set]
+	
+<h4>获得各词词性：</h4>	import nltk.data
+	sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
+	sentences = sent_detector.tokenize(raw_text.strip())
+	
+	tagged_sents = []
+	for sent in sentences:
+    	uni_sent = tokenizer.tokenize(sent)
+    	mwe_text = mwe_tokenizer.tokenize(uni_sent)
+    	tagged_sent = nltk.tag.pos_tag(mwe_text)
+    	stopped_tagged_sent = [x for x in tagged_sent if x[0] not in stopwords_set]  
+    	tagged_sents.append(stopped_tagged_sent)
+	print (tagged_sents)
+	
+	<img src="images/20.png" width="1000"/>
 </pre>
 					
 						</div>

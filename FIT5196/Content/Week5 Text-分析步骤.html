@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title >Jerry Licun Pages</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a href="#">Jerry Licun Pages</a>
+						</h1>
+					</div>
+					<div id="nav">
+						<ul> 
+						<li class="first active">
+								<a href="https://jerrylicun.github.io/">Home</a>
+							</li>
+							<li>
+								<a href="https://jerrylicun.github.io/Timetable/Index/index.html">Timetable</a>
+							</li>
+							<li>
+								<a href="https://github.com/jerrylicun">Demo</a>
+							</li>
+							<li>
+								<a href="https://jerrylicun.github.io/About/About.html">About</a>
+							</li>
+							<li class="last">
+								<a href="https://jerrylicun.github.io/Resume/index.html">Contact</a>
+							</li>
+						</ul>
+						<br class="clear" />
+					</div>
+				</div>
+				<div id="banner">
+					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
+				</div>
+				<div id="main">
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Text-分析步骤
+							</h2>
+<pre>
+<h4>一些可能用到的libraries</h4>	from bs4 import BeautifulSoup as bsoup
+	import re
+	import os
+	import nltk
+	from nltk.collocations import *
+	from itertools import chain
+	import itertools
+	from nltk.tokenize import RegexpTokenizer
+	from nltk.tokenize import MWETokenizer
+	import matplotlib.pyplot as plt
+	%matplotlib inline 
+	from nltk.corpus import reuters
+	
+<h4>Generate the 100 bigram cllocations：</h4>	bigram_measures = nltk.collocations.BigramAssocMeasures()
+	bigram_finder = nltk.collocations.BigramCollocationFinder.from_words(all_words)
+	bigram_finder.apply_freq_filter(2)
+	bigram_finder.apply_word_filter(lambda w: len(w) < 3)
+	top_100_bigrams = bigram_finder.nbest(bigram_measures.pmi, 100) # Top-100 bigrams
+	
+<h4>Generate the TF-IDF vectors: </h4>	from sklearn.feature_extraction.text import TfidfVectorizer
+	tfidf_vectorizer = TfidfVectorizer(input = 'content', analyzer = 'word')
+	tfidf_vectors = tfidf_vectorizer.fit_transform(patent_words)
+	或者：
+	from sklearn.feature_extraction.text import TfidfVectorizer
+	tfidf = TfidfVectorizer(analyzer = "word")
+	tfs = tfidf.fit_transform([' '.join(value) for value in tokenized_reuters.values()])
+	
+	vocab = vectorizer.get_feature_names()
+	for word, weight in zip(vocab, tfs.toarray()[0]):
+    	if weight > 0:
+        	print (word, ":", weight)
+        	
+	输出到txt文档:
+	save_file = open("patent_student.txt", 'w')
+	vocab = tfidf_vectorizer.get_feature_names()
+	cx = tfidf_vectors.tocoo()   <i>#Return the coordinate representation of a sparse matrix</i>
+	for i,j,v in itertools.zip_longest(cx.row, cx.col, cx.data):
+    	save_file.write(pids[i] + ',' + vocab[j] + ',' + str(v) + '\n')
+    	
+<h4>Most common words</h4>1.出现次数最多
+	from nltk.probability import *
+	fd_1 = FreqDist(words)
+	fd_1.most_common(25)
+2.出现文章最多
+	words_2 = list(chain.from_iterable([set(value) for value in tokenized_reuters.values()]))
+	fd_2 = FreqDist(words_2)
+	fd_2.most_common(25)
+3.出现次数少的词
+	lessFreqWords = set([k for k, v in fdist.items() if v < 2])
+	或者:
+	lessFreqWords = set(fd_3.hapaxes())
+	def removeLessFreqWords(fileid):
+    	return (fileid, [w for w in tokenized_reuters[fileid] if w not in lessFreqWords])
+
+<h4>查看某个词所出现的地方</h4>	nltk.Text(reuters.words()).concordance('net')
+
+<h4>Creating Count Vectors</h4>	from sklearn.feature_extraction.text import CountVectorizer
+	vectorizer = CountVectorizer(analyzer = "word") 
+	data_features = vectorizer.fit_transform([' '.join(value) for value in 
+tokenized_reuters.values()])
+	
+	vocab2 = vectorizer.get_feature_names()
+	for word, count in zip(vocab, data_features.toarray()[0]):
+    	if count > 0:
+        	print (word, ":", count)
+
+<h4>提取二元组</h4>	bigram_measures = nltk.collocations.BigramAssocMeasures()
+	bigram_finder = nltk.collocations.BigramCollocationFinder.from_words(all_words)
+	bigram_finder.apply_freq_filter(2)
+	bigram_finder.apply_word_filter(lambda w: len(w) < 3)
+	top_100_bigrams = bigram_finder.nbest(bigram_measures.pmi, 100) # Top-100 bigrams
+	或者:
+	from nltk.util import ngrams
+	bigrams = ngrams(reuters.words(), n = 2)
+	fdbigram = FreqDist(bigrams)
+	fdbigram.most_common()
+
+The following code will find the best 100 bigrams using the PMI scores:(PMI找出最合适的bigram)
+	bigram_measures = nltk.collocations.BigramAssocMeasures()
+	finder = nltk.collocations.BigramCollocationFinder.from_words(reuters.words())
+	finder.nbest(bigram_measures.pmi, 50)
+</pre>
+					
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
+					</div>
+				
+					
+					
+	
+					<br class="clear" />
+				</div>
+				<div id="footer">
+					<div id="footerContent">
+						<h3>
+							About Me
+						</h3>
+						<p>
+								I major in Master of Data Science in Monash University. As an IT faculty student, it is 
+								neccessary and useful for me to record my learning stream and my codes.
+							
+						</p>
+					</div>
+					<div id="footerSidebar1">
+						<h3>
+							Pragramming
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Python code</a>
+							</li>
+							<li>
+								<a href="#">C# code</a>
+							</li>
+							<li class="last">
+								<a href="#">R code</a>
+							</li>
+						</ul>
+					</div>
+					<div id="footerSidebar2">
+						<h3>
+							Data Science
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="#">Data Visualisation</a>
+							</li>
+							<li>
+								<a href="#">Data Wrangling</a>
+							</li>
+							<li class="last">
+								<a href="#">Data Modelling</a>
+							</li>
+						</ul>
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div id="copyright">
+				&copy; Jerry Licun | Design by <a href="http://JerryLicun.github.io/" rel="nofollow"> Jerry Licun</a>
+			</div>
+		</div>
+    </body>
+</html>
