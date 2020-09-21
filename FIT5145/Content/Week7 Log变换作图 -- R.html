@@ -45,39 +45,40 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								Week6 Lab -- ggplot做复杂图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tutorial-6_solution.html">(具体Tutor代码)</a>
+								Log变换作图 -- R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tutorial-7-solution.html">(具体Tutor代码)</a>
 							</h2>
 <pre>
-Decomposing the date：	library(lubridate)
-ped_melb.south.bourke <- ped_melb.south.bourke %>%
-         mutate(year = year(Date),
-         month = month(Date, label = TRUE, abbr = TRUE), 
-         wday = wday(Date, label = TRUE, abbr = TRUE, week_start = 1),
-         day = day(Date))
-
-Exploring time gaps：	library(naniar)
-ped_melb.south.bourke %>% 
-  	filter(Sensor == "Melbourne Central") %>%
-  	ggplot(aes(x=Date_Time, y=Count)) + 
-  	geom_miss_point(size = 0.7) +
-  	facet_wrap(year ~., scales = "free_x", nrow = 3) +
-  	labs(title = "Melbourne Central", y = "Count", x = "Date-Time")
- <img src="images/61.png" />
+library(dplyr)
+library(tidyverse)
+• mutate function: 用data frame里面的数据创建新的数据
+	mutate(dataframe, science = (PV1SCIE + PV2SCIE + PV3SCIE + PV4SCIE + PV5SCIE + 
+    PV6SCIE + PV7SCIE + PV8SCIE + PV9SCIE + PV10SCIE)
+• select function: 按条件寻找需要的row,类似filter
+	select(science, science_fun = ST094Q01NA, science_time = SMINS,
+    stuweight = W_FSTUWT, gender=ST004D01T, anxtest = ANXTEST) 
+• 两者结合：
+   pisa_au %>% 
+   mutate(science = rowMeans(select_at(., vars(starts_with("PV") & ends_with("SCIE"))))) %>%
+   select(science, everything())
  
-Distribution of count:
-ped_melb.south.bourke %>%
-  	ggplot(aes(x = Count)) +
-  	geom_histogram() +
-  	labs(title = "Distribution of hourly pedestrian count", 
-       	x = "Pedestrians detected",
-       	y = "Frequency") +
-  	facet_wrap(~ Sensor, scales = "free", nrow = 3)
-<img src="images/62.png" />
+ggplot作图：
+Log Transforation 对数据进行log变换，之后做散点图和折线图
+对数据进行分类作图：
+pisa_au_science %>% 
+  	ggplot(aes(x = anxtest, y = science, colour = as.factor(gender))) +
+  	geom_point(alpha = 0.3) +
+  	geom_smooth(method = "lm") +
+  	theme(legend.position = "bottom") + 
+  	ggtitle("Relationship between science score and anxiety level") +
+  	labs(colour = "Gender") +
+ 	xlab("Anxiety level") + 
+ 	ylab("Science score")
+ 
+<img src="images/66.png" />
+  
 
-Activity 6.2 
-运用Pedestrian数据： 做复杂的Histogram图、Line图、Boxplot图
 
-
+	
 </pre>
 					
 						</div>
