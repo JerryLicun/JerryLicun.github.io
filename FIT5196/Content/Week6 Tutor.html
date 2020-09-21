@@ -41,60 +41,65 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT5196 Data wrangling
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/Introduction to Data Wrangling -- Reading.html">Week1 Reading -- Introduction to Data Wrangling</a>
-							</li>
-							<li>
-								<a href="../Content/Week1 Tutorial总结.html">Week1 Tutorial -- Pandas介绍</a>
-							</li>
-							<li>
-								<a href="../Content/Week2 Regular Expressions.html">Week2 Lecture -- Regular Expressions</a>
-							</li>
-							<li>
-								<a href="../Content/Week3 读取不同格式数据.html">Week3 Lecture -- Parsing Raw Data(读取不同格式数据)</a>
-							</li>
-							<li>
-								<a href="../Content/Week4 Text Pre-Processing.html">Week4 Lecture -- Text Pre-Processing(处理文本数据)</a>
-							</li>
-							<li>
-								<a href="../Content/Week4 Text-处理步骤.html">Week4 Tutorial -- Text-处理步骤</a>
-							</li>
-							<li>
-								<a href="../Content/Week5 Text-分析步骤.html">Week5 Tutorial -- Text-分析步骤</a>
-							</li>
-							<li>
-								<a href="../Content/Week6 Data Cleansing概念.html">Week6 Lecture -- Data Cleansing概念</a>
-							</li>
-							<li>
-								<a href="../Content/Week6 Tutor.html">Week6 Tutorial -- 处理数据的基本操作</a>
-							</li>
-							<li>
-								<a href="../Content/Week7 Missing_Data.html">Week7 Lecture -- Missing Data概念</a>
-							</li>
-							<li>
-								<a href="../Content/Week7 Missing value的查看分析方法.html">Week7 Tutorial -- Missing Value的查看分析方法</a>
-							</li>
-							<li>
-								<a href="#"></a>
-							</li>
-							
-						</ul>
+					<div id="content">
+						<div id="box1">
+							<h2>
+								处理数据的基本操作
+							</h2>
+<pre>
+<h4>Libraries</h4>	import matplotlib.pyplot as plt
+	%matplotlib inline
+	import pandas as pd
+	import numpy as np
+	import seaborn as sns
+	
+<h4>Exploratory Data Analysis Demos.ipynb</h4>Panda基本作图方法：
+• Bar Plot: plt.bar([10, 20, 30], [5, 8, 2])
+• Histogram: plt.hist(y1)
+• Boxplot: y_outliers = y1+[-10]
+	   plt.boxplot([y1,y_outliers])
+	   plt.show()
+• Line plot: plt.plot(x,y1,'-')
+• Scatter plot: plt.plot(x,y1,'.r')
 
+统计unique值： df1['sex'].unique()
+统计值个数： df1['fare'].value_counts()
+统计空值：sum(df1['embarked'].isnull())
+
+<h4>Week 6  tutorial Data Auditing answer.ipynb</h4>描述数据：
+	titanic.describe()
+	titanic.info()
+按条件提取： titanic[titanic.title == "Rev"]
+             titanic[((titanic.who == "man") | (titanic.who == "woman")) & (titanic.age < 18)]
+替换值：titanic.embark_town.replace({"Cherborg": "Cherbourg", "Cherbourge": "Cherbourg"}, inplace=True)
+        titanic['sex'].replace({'F':'female', 'M':'male'},inplace=True)
+处理重复值(只留第一个): titanic[titanic.duplicated(["firstName", "lastName", "age"], keep="first")]
+
+分割一个列里面的不同字段	
+	
+	
+	
+</pre>
+					
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>

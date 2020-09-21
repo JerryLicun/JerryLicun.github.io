@@ -41,60 +41,47 @@
 				<div id="banner">
 					<img src="images/pic1.jpg" width="1120" height="200" alt="" />
 				</div>
-				
-				
-				
 				<div id="main">
-					
-					<div id="sidebar1">
-						<h3>
-							FIT5196 Data wrangling
-						</h3>
-						<ul class="linkedList">
-							<li class="first">
-								<a href="../Content/Introduction to Data Wrangling -- Reading.html">Week1 Reading -- Introduction to Data Wrangling</a>
-							</li>
-							<li>
-								<a href="../Content/Week1 Tutorial总结.html">Week1 Tutorial -- Pandas介绍</a>
-							</li>
-							<li>
-								<a href="../Content/Week2 Regular Expressions.html">Week2 Lecture -- Regular Expressions</a>
-							</li>
-							<li>
-								<a href="../Content/Week3 读取不同格式数据.html">Week3 Lecture -- Parsing Raw Data(读取不同格式数据)</a>
-							</li>
-							<li>
-								<a href="../Content/Week4 Text Pre-Processing.html">Week4 Lecture -- Text Pre-Processing(处理文本数据)</a>
-							</li>
-							<li>
-								<a href="../Content/Week4 Text-处理步骤.html">Week4 Tutorial -- Text-处理步骤</a>
-							</li>
-							<li>
-								<a href="../Content/Week5 Text-分析步骤.html">Week5 Tutorial -- Text-分析步骤</a>
-							</li>
-							<li>
-								<a href="../Content/Week6 Data Cleansing概念.html">Week6 Lecture -- Data Cleansing概念</a>
-							</li>
-							<li>
-								<a href="../Content/Week6 Tutor.html">Week6 Tutorial -- 处理数据的基本操作</a>
-							</li>
-							<li>
-								<a href="../Content/Week7 Missing_Data.html">Week7 Lecture -- Missing Data概念</a>
-							</li>
-							<li>
-								<a href="../Content/Week7 Missing value的查看分析方法.html">Week7 Tutorial -- Missing Value的查看分析方法</a>
-							</li>
-							<li>
-								<a href="#"></a>
-							</li>
-							
-						</ul>
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Missing Values and Imputation -- Python
+							</h2>
+<pre>
+Some Libraries：
+	import pandas as pd
+	import numpy as np
 
+检查空值数据：df1.isnull().sum()
+求均值：np.mean(df1.age)
+作图：%matplotlib inline
+      df1['age'].hist()
+一列值统计：df1['age'].value_counts()
+不同的值：df1['age'].unique()
+统计空值：sum(df1['age'].isnull())
+
+<h4>备注</h4>总之是一系列看空值，查看空值和其他值关系的方法与python语法，具体的看
+<i>Tutorial_7_Missing_Value_Mean_Imputation.ipynb</i>
+</pre>
+					
+						</div>
+						
+						<div id="box2">
+							<h3>
+							
+							</h3>
+						</div>
+						<div id="box3">
+							
+						</div>
+						<br class="clear" />
 					</div>
+				
+					
+					
+	
 					<br class="clear" />
 				</div>
-				
-				
 				<div id="footer">
 					<div id="footerContent">
 						<h3>
