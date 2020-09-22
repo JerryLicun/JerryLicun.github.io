@@ -45,30 +45,37 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								中心极限定理和置信区间
+								假设检验
 							</h2>
 <pre>
-<h4>Central Limit Theorem</h4>中心极限定理指的是给定一个任意分布的总体。我每次从这些总体中随机抽取 n 个抽样，一共抽 m 次。 然后把这 
-m 组抽样分别求出平均值。 这些平均值的分布接近正态分布。  <a href="https://zhuanlan.zhihu.com/p/25241653">--知乎</a>
+在有随机性参与的数学计算中，理论值和你实验室取样后算出来的计算值是会有一定程度的偏差的。所以，假设
+检验的用处就是告诉你，你算没算错。
 
-<h4>Confidence Intervals</h4>In practice it is very common to consider α = 0:05, i.e., a 95% confidence interval.
-<h4>计算方法</h4>（1）Confidence interval of mean with known variance
-<img src="images/72.png" />
-<img src="images/73.png" />
-(2)Confidence interval of mean with unknown variance
-<img src="images/74.png" />
-<img src="images/75.png" />
-<img src="images/76.png" />
-(3)Confidence Intervals for Difference of Normal Means (Known Variance)
-[The difference between two samples]
-<img src="images/77.png" />
-<img src="images/78.png" />
-<img src="images/79.png" />
-(4)Confidence Intervals for Difference of Normal Means (Unknown Variance)
-<img src="images/80.png" />
+<h4>Hypothesis Testing</h4>(1)Known Variance, unknown mean (Two-sided)
+<img src="images/83.png" />
+例子：
+<img src="images/84.png" />
+• p-value of 0.139 can be interpreted as follows:
+If the null was true,difference from the null as the one that we saw would be around 0.139
 
-<h3>Summary</h3><img src="images/81.png" />
-<img src="images/82.png" />
+(2)Known Variance, unknown mean(One-sided)
+<img src="images/85.png" />
+<img src="images/86.png" />
+
+(3)Unknown Variance
+<img src="images/87.png" />
+<img src="images/88.png" />
+
+(4)Known Variance Difference of Means
+<img src="images/89.png" />
+<img src="images/90.png" />
+
+(5)Unknown Variance Difference of Means
+<img src="images/91.png" />
+<img src="images/92.png" />
+<img src="images/93.png" />
+
+<h4>Conclusion</h4><img src="images/94.png" />
 </pre>
 					
 						</div>
