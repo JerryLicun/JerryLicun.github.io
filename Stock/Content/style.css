@@ -24,6 +24,12 @@ body {
 	background-image: url("images/blue-snow.png");
 }
 
+pre {
+	white-space：normal；
+	word-wrap：break-word；
+	word-break：break-all；
+}
+
 br.clear {
 	clear: both;
 }
