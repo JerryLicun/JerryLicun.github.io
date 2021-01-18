@@ -45,34 +45,35 @@
 					<div id="content">
 						<div id="box1">
 							<h2>
-								模板
+								Week1 - Tutorial
 							</h2>
 <pre>
-688056 - 莱伯泰科 （价值低）
-合理估值区间 25 - 30亿
-大区间 20 - 50亿
+<h4>RDD Object</h4>• parallelize() distribute a local python collection to form an RDD. 
+把python数据类型（List，set）转换成RDD
+• textFile() function reads a text file and returns it as an RDD of strings.
+读取txt文档转换为RDD
 
-688268 - 华特气体 （价值高）
-	对标金虹气体（140亿，营收11个亿）	
-	华特气体（80亿，营收8个亿，增速快）
-对标后合理估值区间 80 - 100 亿
-大区间 60亿 -- 120亿 
+<h4>RDD Operations</h4>• map() method applies a function to each elements of the RDD.
+把括号里的函数应用于RDD里的每一个元素
+•flatMap(): first applies a function to each elements of an RDD and then flatten the results
+首先对每个元素操作，然后把结果扁平化
+•mapValues() function requires that each element in the RDD has a key/value pair structure.It applies 
+a function to each of the element values. The element key will remain unchanged.
+要求RDD里每一个元素有主键和这个键所对应的值，这个函数作用于值而不操作主键
+• flatMapValues()只对值操作而不操作主键，并对结果扁平化
+• reduce() 用于计算，常见的有把元素全部相加
 
-688333 - 铂力特 （价值中）
-合理估值区间 80 - 120亿
-大区间 70 - 150 - 200 亿
-
-688229 - 博睿数据 （前景好，价值高）
-合理估值区间 45 - 60亿
-大区间 40 - 100 亿
-
-688357 - 建龙微纳 （价值中）
-合理估值区间 30亿 - 50亿
-大区间 25亿 - 70亿
+<h4>Spark Operations</h4>•全局变量：blank_lines = sc.accumulator(0) # Create Accumulator[int] intitialized to 0
+•共享变量（Broadcast Variable):
+bad_words = {'crap', 'rascals', 'fuck'}
+broadcast_bad_words = sc.broadcast(bad_words)
+# if word in bad_words:
+if word in broadcast_bad_words.value: 
+            bad_words_count += 1
+•实现统计字符个数：
+rdd_4 = rdd_3.reduceByKey(lambda a,b:a+b)
 
 
-<a href="21-01-18 估值分析.html">后续估值分析</a>
-	
 </pre>	
 						</div>
 						
