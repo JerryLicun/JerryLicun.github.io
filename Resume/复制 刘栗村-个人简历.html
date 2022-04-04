@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>JerryLicun- Monash Data Science Master在读/Melbourne</title>
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script>
+        function loading() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <article class="container">
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关，记得及时删除这段代码 Start-->
+            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>
+            <!-- 左侧固定开关，记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section class="me">
+               
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="assets/images/my_pic.jpg" width="150">
+                
+
+                <h3 class="name">刘栗村 - 个人简介</h3>
+                <h4 class="info-job" style="text-align: left;"><br>本科211，澳洲Monash大学数据科学专业硕士。因为疫情休学一年，<mark>人在国内。</mark><br><br>擅长使用<mark>Python或R</mark>语言来进行数据的清洗与预处理，数据分析、数据挖掘、大数据和一些最基础的机器学习的内容。<br><br>对数据方面很感兴趣，想用学的东西来解决实际问题。
+所以利用休学的一年时间寻找与<mark>数据</mark>相关的实习工作。
+</h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>个人信息</label>
+                        <span>刘栗村 / 男 / 24岁</span>
+                    </li>
+                     <li>
+                        <label>个人主页</label>
+                        <a href="http://JerryLicun.github.io" target="_blank">JerryLicun.github.io</a>
+                    </li>
+                    <li>
+                        <label>Github</label>
+                        <a href="https://JerryLicun.github.io" target="_blank">JerryLicun</a>
+                    </li>
+                    <li>
+                        <label>英语水平</label>
+                        <span>CET-6，境外研究生</span>
+                    </li>
+                    <li>
+                        <label>计算机水平</label>
+                        <span>计算机二级，熟练Python</span>
+                    </li>
+                   
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
+                <hr/>
+                <ul>
+                	<li>
+                        <label>QQ</label>
+                        <span>34527388</span>
+                    </li>
+                    <li>
+                        <label>手机</label>
+                       <span>18062380566</span><br>
+                     
+                    </li>
+                    <li>
+                        <label>邮箱</label>
+                        <span>345277388@qq.com</span>
+                    </li>
+                   
+                </ul>
+            </section>
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
+                <hr/>
+                <ul>
+      
+                    <li>
+                        <label>Python</label>
+                        <progress value="95" max="100"></progress>
+                    </li>
+                     <li>
+                        <label>R</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Apache Spark</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>前端</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>SQL数据库</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                       <li>
+                        <label>GIS</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Matlab</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+
+         <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>备注</h2>
+                <hr/>
+                <ul>
+                <mark>个人主页</mark>与<mark>项目Demo</mark>均挂载于Github，国内访问可能受限，<mark>需要VPN</mark>访问。
+                </ul>
+            </section>
+
+            <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+                <hr/>
+                <img src="assets/images/wechat.jpg" style="width: 100%;" alt="">
+            </section>
+
+            <!-- 技术栈 -->
+            <!-- <div class="stack info-unit">
+                    <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <label>前端</label>
+                            <span>React、jQuery、微信小程序、Bootstrap、SASS、LESS</span>
+                        </li>
+                        <li>
+                            <label>后端</label>
+                            <span>Node.js、MySQL、MongoDB、WordPress、ThinkPHP</span>
+                        </li>
+                        <li>
+                            <label>其他</label>
+                            <span>Git、SVN、Markdown</span>
+                        </li>
+                    </ul>
+                </div> -->
+        </section>
+
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>Monash University - Data Science 数据科学（硕士）</span>
+                            <time>2020.03 - 至今</time>
+                        </h3>
+                        <p>GPA:
+                            <mark>3.25</mark> </p>
+                              <p>
+                            专业核心课程：Data Exploration and Visualisation (数据挖掘与可视化)； Data Wrangling (数据清洗)； Statistical Data Modelling (数据统计模型)；Algorithms Foundations in Python (Python算法基础)； Computer architecture and networks (数据结构与网络)； Introduction to Databases (数据库)； Data processing for Big Data (大数据处理)</p>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>华中农业大学 - 地理信息（本科）</span>
+                            <time>2015.09 - 2019.07</time>
+                        </h3>
+                        <p>GPA:
+                            <mark>3.02</mark>
+                        <p>
+                            专业核心课程：地理信息原理与应用、遥感导论、主动遥感、定量遥感、高光谱遥感、
+                            数据结构、面向对象设计、数据库设计、空间信息导论、C++程序设计、VB.Net程序设计、基于C#的二次开发</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 实习经历 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>实习经历</h2>
+                <hr/>
+                
+                   <ul>
+                    <li>
+                        <h3>
+                            <span>[经历1] 华泰证券宜昌西陵一路营业部 - 日常经营数据分析软件开发实习  </span>
+                            <time>2021.02 至 2021.03</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>为华泰证券宜昌西陵一路营业部设计开发每周经营数据分析程序，独立完成。   
+                            </li>
+                            <li>应用<mark>Python</mark>进行数据预处理与分析，使用<mark>Matplotlib</mark>进行可视化展示，并在<mark>Jupyter Notebook</mark>中编译相应分析说明文档。
+                            
+                            <li>较好实现预期功能，<mark>通过客户验收</mark>。
+                       
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+                
+                
+                
+                <ul>
+                    <li>
+                        <h3>
+                            <span>[经历2] 武汉光庭公司 - 智慧城市软件开发实习  </span>
+                            <time>2018.08 至 2018.09</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>基于智慧城市的 GIS 软件开发实习，学习Web前端及Java的基础知识。 
+                            	作为组长，在实习中与小组成员相互配合，共同进行功能的实现、测试、并最终较好的完成项目。    
+                            </li>
+                            <li>前端主要有<mark>HTML5+CSS+Javascript,以及Bootstrap</mark>前端应用框架，
+                            	及<mark>JQuery、JS</mark>技术。后端学习了<mark>MySQL</mark>数据库的使用
+                            </li> 
+                            <li>同时基于GIS相关内容，掌握了<mark>百度地图API</mark>的基本使用与地图功能的实现。
+                       
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+                
+               
+                
+            </section>
+
+            <!-- 项目经验 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>个人项目</h2>
+                <hr/>
+                <ul>
+                	
+                	
+                	
+                	
+                	                        <li>
+                        <h3>
+                            <span>[项目1] 通过实时数据预测行人流量</span>
+                            <span class="link">
+                                <a href="https://github.com/JerryLicun/Stream_Data_Prediction" target="_blank">Demo</a>
+                            </span>
+                            <time>2021.01 - 2021.02</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Python + Apache Kafka and Apache Spark</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]利用大数据工具，开发机器学习模型来预测行人流量，并使用Apache Kafka和Apache Spark将模型集成到流媒体平台
+                                	   
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]能初步应用<mark>Apache Kafka</mark>和<mark>Apache Spark</mark>进行实时数据处理
+                                
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]实现预期功能
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    </li>                    
+                	
+                	<li>
+	
+                        <h3>
+                            <span>[项目2] The Relationship Between Weather condition and Bushfire</span>
+                            <span class="link">
+                                <a href="https://jerrylicun.github.io/Project/Bushfire/index.html" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.10 - 2020.11</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：D3+HTML+CSS+Javascript</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]What’s the development trend of bushfire in Australia and which weather conditions affect it?
+                                	   
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]使用D3进行基本网页绘图与可视化设计
+                                
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]完成项目并实现预期功能
+                            </li>
+                        </ul>
+                        
+                	     
+<li>
+                        <h3>
+                            <span>[项目3] 预测汽车燃油效率与居民年收入</span>
+                            <span class="link">
+                                <a href="https://github.com/JerryLicun/R_linear_regression/tree/master" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.09 - 2020.10</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：R</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]使用机器学习（线性/非线性回归算法）预测汽车燃油效率与居民年收入
+                                	   
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]运用已有数据对待预测结果进行预测，测试集精确度为84%
+                                
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]实现预期功能
+                            </li>
+                        </ul>
+                    </li>
+                	
+                	
+<li>
+                        <h3>
+                            <span>[项目4] 墨尔本市区行人流量分析与可视化</span>
+                            <span class="link">
+                                <a href="https://github.com/JerryLicun/R_shiny" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.09 - 2020.10</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：R</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]Data Wrangling and Create an Interactive Visualisation using R
+                                	   
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]使用R语言预处理行人流量数据，并使用shiny生成交互式界面
+                                
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]实现预期功能
+                            </li>
+                        </ul>
+                    </li>
+                	
+<li>
+                        <h3>
+                            <span>[项目5] Preprocess Tweets and Convert into Numerical Representations</span>
+                            <span class="link">
+                                <a href="https://github.com/JerryLicun/Tweets_Preprocess" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.08 - 2020.09</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Python</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]Make the data suitable
+for input into recommender-systems / information-retrieval algorithms
+                                	   
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]使用Python预处理推特数据，生成格式化文档
+                                
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]完成项目并实现预期功能
+                            </li>
+                        </ul>
+                    </li>
+                    
+                	
+                    <li>
+                        <h3>
+                            <span>[项目6] Covid-19流行病传染性分析与可视化</span>
+                            <span class="link">
+                                <a href="https://github.com/JerryLicun/Covid-19" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.06 - 2020.07</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Python</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]Covid-19在人与人之间传播，可视化展示一段时间内人群的感染情况；并模拟在政府不同程度的封锁措施下，病毒的传染情况
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]单独完成
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据，后台代码编写并用
+                                <mark>matplotlib</mark> 进行图形化结果展示
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]完成项目并实现预期功能
+                            </li>
+                        </ul>
+                    </li>
+
+ 
+
+                    <li>
+                        <h3>
+                            <span>[项目7] 华中农业大学校园社团管理系统</span>
+                            <span class="link">
+                                <a href="https://github.com/JerryLicun/HZAU_system" target="_blank">Demo</a>
+                            </span>
+                            <time>2017.11 - 2017.12</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：ArcEngine + C#</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现了华中农业大学校园社团与社团管理部门的基本交互，校园活动的线上化展示，
+                                	   并实现基于地图的校园活动查询功能和矢量地图操作的基本功能
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]作为组长，同4位同学一起
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]完成从
+                                <mark>“调研-设计-实现-文档”</mark>等工作，主要负责系统原型、功能框架及数据提交流程、元数据及源数据的管理与共享方案的设计以及系统开发等工作
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品最终取得华中农业大学互联网开发大赛一等奖（队长） </li>
+                        </ul>
+                    </li>
+                  
+                    
+
+               
+                    
+                    
+                    
+
+                        
+                    </li>
+                    </li>                    
+     
+                </ul>
+            </section>
+
+  <!-- 实习经历 -->
+ 
+
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>自我期望</h2>
+                <hr/>
+                <p>仰望星空，脚踏实地。愿人生有梦，各自精彩。
+            </section>
+        </section>
+        
+    </article>
+
+
+
+    <footer class="footer">
+        <p>©2021 Jerry Licun
+            <time>2021年03月01日</time>.</p>
+    </footer>
+
+    <!-- 侧栏 -->
+    <aside>
+        <ul>
+            <li>
+                <a href="https://github.com/JerryLicun" target="_blank">源代码</a>
+            </li>
+            <li>
+                <a href="https://jerrylicun.github.io/" target="_blank">Blog</a>
+            </li>
+        </ul>
+    </aside>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
