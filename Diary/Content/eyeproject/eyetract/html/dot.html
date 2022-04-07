@@ -153,6 +153,15 @@
 		        		google.type = "button";
 						body.appendChild(google);
 		        		google.addEventListener ("click", function() {
+							window.location.href='google1.htm';									
+						});
+						
+						var inde = document.createElement("button");		        		
+						inde.innerHTML = "Index Demo";
+						inde.className = "btn btn-success btn-lg";
+		        		inde.type = "button";
+						body.appendChild(inde);
+		        		inde.addEventListener ("click", function() {
 							window.location.href='index2.html';									
 						});
 					}
