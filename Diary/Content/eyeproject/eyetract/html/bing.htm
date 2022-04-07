@@ -205,8 +205,30 @@ si_ST=new Date;
                 }
             });
     }
-   
-  
+    function eysMonitor() {
+        webgazer.setGazeListener(function(data, elapsedTime) {
+            if (data == null) {
+                return;
+            }
+            var x = data.x; //these x coordinates are relative to the viewport
+            var y = data.y; //these y coordinates are relative to the viewport
+            // console.log(elapsedTime); //elapsed time is based on time since begin was called
+            // console.log(xprediction);
+            // console.log(yprediction);
+            console.log(data);
+            //webgazer.findDomElementGoogle(x,y)
+            saveData(x,y);
+        }).begin();
+    }
+    function currentPosition() {
+        console.log(1)
+        var prediction = webgazer.getCurrentPrediction();
+        if (prediction) {
+            var x = prediction.x;
+            var y = prediction.y;
+            console.log(x)
+            saveData(x,y)
+        }
     }
 
         var title= "习近平：新时代要有新气象更要有新作为"
@@ -243,7 +265,7 @@ si_ST=new Date;
             "　　12时17分，见面活动结束。习近平等向中外记者们挥手道别。全场再次响起热烈的掌声。\n" +
             "\n" +
             "　　中央人民广播电台、中央电视台、中国国际电视台、中国国际广播电台对见面实况进行了现场直播，人民网、新华网、中国网络电视台、中国网，人民日报客户端、新华社客户端、央视新闻客户端也进行了直播。"
-
+</script>
 
 
 
