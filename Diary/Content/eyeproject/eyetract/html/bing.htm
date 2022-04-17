@@ -80,7 +80,7 @@ si_ST=new Date;
 		    .setGazeListener(function(data, clock) {
 		   	if(data!=null)
 		    	console.log(findDomElementBing(data.x,data.y));
-
+				console.log(44);
 		     //   console.log(data); /* data is an object containing an x and y key which are the x and y prediction coordinates (no bounds limiting) */
 		     //   console.log(clock); /* elapsed time in milliseconds since webgazer.begin() was called */
 		    })
@@ -156,23 +156,6 @@ si_ST=new Date;
 
 
 
-<script>
-function getTransform(el) {
-    var results = $(el).css('jerry').match(/matrix(?:(3d)\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))(?:, (\d+)), \d+\)|\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))\))/)
-
-    if(!results) return [0, 0, 0];
-    if(results[1] == '3d') return results.slice(2,5);
-
-    results.push(0);
-    return results.slice(5, 8);
-}
-
-var xxxx = new getTransform();
-console.log(xxxx);
-window.alert("xxxx");
-
-</script>
-
 
 
 <!--第四段-->
@@ -224,6 +207,7 @@ window.alert("xxxx");
                 type: "get",
                 success: function (data) {
                 console.log(data)
+                console.log(22);
 
                 }
             })
@@ -252,6 +236,7 @@ window.alert("xxxx");
             // console.log(xprediction);
             // console.log(yprediction);
             console.log(data);
+            console.log(11);
             //webgazer.findDomElementGoogle(x,y)
             saveData(x,y);
         }).begin();
@@ -263,6 +248,7 @@ window.alert("xxxx");
             var x = prediction.x;
             var y = prediction.y;
             console.log(x)
+            console.log(33);
             saveData(x,y)
         }
     }
