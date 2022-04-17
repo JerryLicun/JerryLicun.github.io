@@ -5,8 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script id="ipV6TestScript2" type="text/javascript" async="" src="./bing/test"></script>
 
-<script type="text/javascript">//<![CDATA[
-si_ST=new Date;
+
 <script type="text/javascript">//<![CDATA[
 si_ST=new Date;
 //]]></script><!--pc--><title>Eye</title>
@@ -14,7 +13,6 @@ si_ST=new Date;
 
 
 <!--第一段-->
-
     <title>My experiment</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!--    <script src="./js/webgazer.js" type="text/javascript" />-->
@@ -49,7 +47,7 @@ si_ST=new Date;
         /*border: 1px solid black;*/
         margin: 20px 20%;
         height: 300px;
-        font-size: 50px;
+        font-size: 100px;
     }
     .bottom{
         align-content: center;
@@ -123,6 +121,9 @@ si_ST=new Date;
 
 
 		};
+		
+		
+		
 		</script>  
 
 
@@ -150,10 +151,27 @@ si_ST=new Date;
 <canvas width="11px" height="781px" id="renderCanvas" style="display:none;"></canvas>
 <video id="webgazerVideoFeed" autoplay="" width="320" height="240" style="display: none; position: absolute; top: 0px; left: 0px; margin: 0px;"></video>
 <canvas id="webgazerVideoCanvas" width="320" height="240" style="display: none;"></canvas>
-<div style="position: fixed; z-index: 99999; left: -5px; top: -5px; width: 10px; height: 10px; background: red; display: block; border-radius: 100%; opacity: 0.7; transform: translate3d(824px, 448.5px, 0px);"></div>
+<div id="jerry" style="position: fixed; z-index: 99999; left: -5px; top: -5px; width: 10px; height: 10px; background: red; display: block; border-radius: 100%; opacity: 0.7; transform: translate3d(824px, 448.5px, 0px);"></div>
 </body>
 
 
+
+<script>
+function getTransform(el) {
+    var results = $(el).css('jerry').match(/matrix(?:(3d)\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))(?:, (\d+)), \d+\)|\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))\))/)
+
+    if(!results) return [0, 0, 0];
+    if(results[1] == '3d') return results.slice(2,5);
+
+    results.push(0);
+    return results.slice(5, 8);
+}
+
+var xxxx = new getTransform();
+console.log(xxxx);
+window.alert("xxxx");
+
+</script>
 
 
 
